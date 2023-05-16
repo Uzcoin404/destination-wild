@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header header_home">
+        <img src="<?= get_template_directory_uri() ?>/front-page/images/hero-bg.jpg" alt="" class="hero__image">
+    
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="flex-grow-1"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Destination Wild</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <a href="#" class="nav_login_btn">
+                        <i class="fa-solid fa-user me-2"></i>
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero hero_home">
+            <div class="hero__content">
+                <h1 class="hero__title">Find Your Next Hike</h1>
+                <div class="w-100">
+                    <form aria-label="Search by city, park, or trail name" id="searchBar" action="/category/trails">
+                        <div class="hero__search">
+                            <input type="text" name="q" aria-label="Search by city, park, or trail name" autocomplete="off"
+                                autocorrect="off" class="hero_search_input"
+                                placeholder="Search by city, park, or trail name" spellcheck="false">
+    
+                            <button class="hero_search_btn" type="submit">
+                                <svg width="24" height="24" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.473 17.887A9.46 9.46 0 0 1 10.5 20a9.5 9.5 0 1 1 9.5-9.5 9.46 9.46 0 0 1-2.113 5.973l5.32 5.32a1 1 0 0 1-1.414 1.414l-5.32-5.32ZM18 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                                        fill="#fff"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="hero_map_link"><a href="/map">Explore nearby trails</a></div>
+            </div>
+        </div>
+    </header>
+    <div class="hero_vectors">
+        <div class="hero_vector">
+            <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="hero_vector_img">
+            <img src="<?= get_template_directory_uri() ?>/images/icons/header2.svg" alt="" class="hero_vector_img">
+        </div>
+    </div>
+
+    <main id="main" class="site-main" role="main">
+        <div class="container container__big">
+            <section class="near__posts mb-3" id="near-posts">
+                <div class="section__header">
+                    <h3 class="section__title m-0">Local favorites near Colarado</h3>
+                    <a href="#" class="section_see_all">See all</a>
+                </div>
+
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <a href="#">
+                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                    alt="" class="product_card_img">
+                            </a>
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                alt="" class="product_card_img">
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                alt="" class="product_card_img">
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                alt="" class="product_card_img">
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                alt="" class="product_card_img">
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-3 col-md-4 col-6">
+                        <div class="card product__card">
+                            <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                alt="" class="product_card_img">
+                            <div class="product_card_content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="product_card_tag">Moderate</span>
+                                </div>
+                                <h5 class="product_card_title">
+                                    Camp under the stars on a volcano
+                                </h5>
+                                <p class="product_card_address">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                        class="me-2">
+                                    Greatroad, Florida
+                                </p>
+                                <div class="product_card_rate">
+                                    <i class="fa-solid fa-star me-1"></i>
+                                    4.7 (1909)
+                                </div>
+                            </div>
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="activity mb-4" id="activity">
+                <h3 class="section__title mb-4">Choose activity</h3>
+                <div class="activity__content">
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-60.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-58.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Hiking</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-58-1.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-61.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-57.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-57-1.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-55.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity__box">
+                        <div class="activity_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/05/image-59.jpg" alt=""
+                                class="activity_box_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/Group 18.svg" alt=""
+                                class="activity_box_pin">
+                        </div>
+                        <h6 class="activity_box_title">Camping</h6>
+                    </a>
+                    <a href="#" class="activity_box_more">
+                        <div class="activity_box_content">
+                            <i class="fa-solid fa-chevron-right activity_box_pin"></i>
+                        </div>
+                        <h6 class="activity_box_title">More</h6>
+                    </a>
+                </div>
+            </section>
+            <section class="subscribe" id="subscribe">
+                <div class="subscribe_now">
+                    <img src="<?= get_template_directory_uri() ?>/images/Group 5722.png" alt=""
+                        class="subscribe_now_img">
+                    <div class="subscribe__content">
+                        <h2 class="subscribe__title">Subscribe now!</h2>
+                        <p class="subscribe__text">
+                            Get ready to receive latest news from “Destination Wild”. You will get 10% discount on the
+                            first
+                            try
+                        </p>
+                        <form action="#" class="subscribe__form d-flex w-100">
+                            <input type="email" class="subscribe__input" placeholder="your_email@here.com" required>
+                            <button class="btn subscribe__btn">Subscribe</button>
+                        </form>
+                    </div>
+                    <img src="<?= get_template_directory_uri() ?>/images/icons/subscribe.svg" alt=""
+                        class="subscribe_vector subscribe_vector1">
+                </div>
+                <div class="invite_friend">
+                    <h2 class="subscribe__title">Invite Your friend</h2>
+                    <p class="subscribe__text">
+                        Get ready to receive latest news from “Destination Wild”. You will get 10% discount on the first
+                        try
+                    </p>
+                    <form action="#" class="subscribe__form d-flex w-100">
+                        <input type="email" class="subscribe__input" placeholder="your_email@here.com" required>
+                        <button class="btn subscribe__btn">Subscribe</button>
+                    </form>
+                    <img src="<?= get_template_directory_uri() ?>/images/icons/subscribe.svg" alt=""
+                        class="subscribe_vector subscribe_vector2">
+                </div>
+            </section>
+            <section>
+                <h5 class="section__title2">GearHungry Review Board Process</h5>
+                <div class="row">
+                    <div class="col-xl-4 col-12">
+                        <p class="subscribe__text pt-3">
+                            Our review process involves experts in wide range of fields with decades of testing
+                            esperience.
+                            The goal is to provide you with accurate information through heavy research and aggressive
+                            testing so you can find the perfect piece of gear for any situation. <br> <br>
+
+                            <a href="#">Learn more about the review process</a>
+                        </p>
+                    </div>
+                    <div class="col-xl-8 col-12">
+                        <div class="d-flex">
+                            <div class="reviewboard_box">
+                                <div class="reviewboard_box_header">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/Vector (2).svg" alt="">
+                                </div>
+                                <div class="reviewboard_profile_text" class="mb-3">
+                                    <p class="mb-0 mt-2"><b>#1</b></p>
+                                    <p>Researched</p>
+                                </div>
+                                <div class="reviewboard_box_profile">
+                                    <div class="avatar_group center">
+                                        <span class="avatar_group_5">
+                                            <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png"
+                                                alt="">
+                                        </span>
+                                        <span class="avatar_group_4">
+                                            <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                        </span>
+                                        <span class="avatar_group_3">
+                                            <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                        </span>
+                                        <span class="avatar_group_2">
+                                            <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                        </span>
+                                        <span class="avatar_group_1">
+                                            <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                        </span>
+                                    </div>
+                                    <div class="reviewboard_profile_title">
+                                        <p class="mb-0 mt-2"><b>Sam Andersen</b></p>
+                                        <p>Sam Andersen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewboard_box">
+                                <div class="reviewboard_box_header">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/Vector (3).svg" alt="">
+                                </div>
+                                <div class="reviewboard_profile_text" class="mb-3">
+                                    <p class="mb-0 mt-2"><b>#1</b></p>
+                                    <p>Researched</p>
+                                </div>
+                                <div class="reviewboard_box_profile">
+                                    <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 43.png" alt="">
+                                    <div class="reviewboard_profile_title">
+                                        <p class="mb-0 mt-2"><b>Sam Andersen</b></p>
+                                        <p>Sam Andersen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewboard_box">
+                                <div class="reviewboard_box_header">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/Vector (4).svg" alt="">
+                                </div>
+                                <div class="reviewboard_profile_text" class="mb-3">
+                                    <p class="mb-0 mt-2"><b>#1</b></p>
+                                    <p>Researched</p>
+                                </div>
+                                <div class="reviewboard_box_profile">
+                                    <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 44.png" alt="">
+                                    <div class="reviewboard_profile_title">
+                                        <p class="mb-0 mt-2"><b>Sam Andersen</b></p>
+                                        <p>Sam Andersen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewboard_box">
+                                <div class="reviewboard_box_header">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/Vector (5).svg" alt="">
+                                </div>
+                                <div class="reviewboard_profile_text" class="mb-3">
+                                    <p class="mb-0 mt-2"><b>#1</b></p>
+                                    <p>Researched</p>
+                                </div>
+                                <div class="reviewboard_box_profile">
+                                    <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 45.png" alt="">
+                                    <div class="reviewboard_profile_title">
+                                        <p class="mb-0 mt-2"><b>Sam Andersen</b></p>
+                                        <p>Sam Andersen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewboard_box">
+                                <div class="reviewboard_box_header">
+                                    <img src="<?= get_template_directory_uri() ?>/images/icons/Vector (6).svg" alt="">
+                                </div>
+                                <div class="reviewboard_profile_text" class="mb-3">
+                                    <p class="mb-0 mt-2"><b>#1</b></p>
+                                    <p>Researched</p>
+                                </div>
+                                <div class="reviewboard_box_profile">
+                                    <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 46.png" alt="">
+                                    <div class="reviewboard_profile_title">
+                                        <p class="mb-0 mt-2"><b>Sam Andersen</b></p>
+                                        <p>Sam Andersen</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h5 class="section__title2">GearHungry Review Board Process</h5>
+                <div class="card2__wrapper">
+                    <div class="card2">
+                        <a href="#" class="card2_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/image 24.jpg" alt="">
+                            <p class="card2_text2">The Wuhletal Hiking Trail</p>
+                        </a>
+                        <div class="card2_content">
+                            <p class="card2_text">
+                                Our review process involves experts in wide range of fields with decades of testing
+                                esperience. The goal is to provide you with accurate information through heavy research
+                                and
+                                aggressive testing so you can find the perfect piece of gear for any situation. <br>
+                                <br>
+                                <a href="#">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <a href="#" class="card2_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/image 27.jpg" alt="">
+                            <p class="card2_text2">The Wuhletal Hiking Trail</p>
+                        </a>
+                        <div class="card2_content">
+                            <p class="card2_text">
+                                Our review process involves experts in wide range of fields with decades of testing
+                                esperience. The goal is to provide you with accurate information through heavy research
+                                and
+                                aggressive testing so you can find the perfect piece of gear for any situation. <br>
+                                <br>
+                                <a href="#">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <a href="#" class="card2_img">
+                            <img src="<?= get_template_directory_uri() ?>/images/image 28.jpg" alt="">
+                            <p class="card2_text2">The Wuhletal Hiking Trail</p>
+                        </a>
+                        <div class="card2_content">
+                            <p class="card2_text">
+                                Our review process involves experts in wide range of fields with decades of testing
+                                esperience. The goal is to provide you with accurate information through heavy research
+                                and
+                                aggressive testing so you can find the perfect piece of gear for any situation. <br>
+                                <br>
+                                <a href="#">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#" class="card2_more">
+                        <div class="card2_more_content">
+                            <i class="fa-solid fa-angles-right"></i>
+                            <p class="mt-3">See more</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="footer_vector">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header2.svg" alt="" class="footer_vector">
+        <div class="container-xxl">
+            <div class="footer__content">
+                <a href="/">
+                    <img src="<?= get_template_directory_uri() ?>/images/logo-white.svg" alt="">
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Activity Type</b></li>
+                    <li class="footer__link"><a href="#">Backpacking</a></li>
+                    <li class="footer__link"><a href="#">Bike touring</a></li>
+                    <li class="footer__link"><a href="#">Bird watching</a></li>
+                    <li class="footer__link"><a href="#">Camping</a></li>
+                    <li class="footer__link"><a href="#">Cross-country skiing</a></li>
+                    <li class="footer__link"><a href="#">Fishing</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Horseback riding</a></li>
+                    <li class="footer__link"><a href="#">Mountain biking</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Paddle sports</a></li>
+                    <li class="footer__link"><a href="#">Road biking</a></li>
+                    <li class="footer__link"><a href="#">Rock climbing</a></li>
+                    <li class="footer__link"><a href="#">Running</a></li>
+                    <li class="footer__link"><a href="#">Show shoeing</a></li>
+                    <li class="footer__link"><a href="#">Walking</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Attractions</b></li>
+                    <li class="footer__link"><a href="#">Beach</a></li>
+                    <li class="footer__link"><a href="#">Cave</a></li>
+                    <li class="footer__link"><a href="#">Challenging</a></li>
+                    <li class="footer__link"><a href="#">City walk</a></li>
+                    <li class="footer__link"><a href="#">Forest</a></li>
+                    <li class="footer__link"><a href="#">Historic site</a></li>
+                    <li class="footer__link"><a href="#">Long</a></li>
+                    <li class="footer__link"><a href="#">Moderately challenging</a></li>
+                    <li class="footer__link"><a href="#">Not dogs</a></li>
+                    <li class="footer__link"><a href="#">Rails trails</a></li>
+                    <li class="footer__link"><a href="#">River</a></li>
+                    <li class="footer__link"><a href="#">Short</a></li>
+                    <li class="footer__link"><a href="#">Views</a></li>
+                    <li class="footer__link"><a href="#">Waterfall</a></li>
+                    <li class="footer__link"><a href="#">Wildflowers</a></li>
+                    <li class="footer__link"><a href="#">Wildlife</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Suitability</b></li>
+                    <li class="footer__link"><a href="#">Dog on leash</a></li>
+                    <li class="footer__link"><a href="#">Kid friendly</a></li>
+                    <li class="footer__link"><a href="#">Partially paved</a></li>
+                    <li class="footer__link"><a href="#">Paved</a></li>
+                    <li class="footer__link"><a href="#">Stroller friendly</a></li>
+                    <li class="footer__link"><a href="#">Wheelchair friendly</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Company</b></li>
+                    <li class="footer__link"><a href="#">About Destination Wild</a></li>
+                    <li class="footer__link"><a href="#">Press Releases</a></li>
+                    <li class="footer__link"><a href="#">Environment</a></li>
+                    <li class="footer__link"><a href="#">Jobs</a></li>
+                    <li class="footer__link"><a href="#">Privacy Policy</a></li>
+                    <li class="footer__link"><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="footer__social">
+                    <h6 class="footer_social_text mb-3 pb-2">Follow us</h6>
+                    <div class="row">
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer_c_text">Destination Wild © 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- <script>
+    let heroImages = document.querySelectorAll('.hero__image');
+    let imgIndex = 1;
+    setInterval(() => {
+        heroImages.forEach((img, i) => {
+            if (i !== imgIndex) {
+                img.classList.add('d-none');
+            } else {
+                img.classList.remove('d-none');
+            }
+        })
+        if (imgIndex + 1 < heroImages.length) {
+            imgIndex += 1;
+        } else {
+            imgIndex = 0;
+        }
+    }, 5000);
+</script> -->
+</body>
+
+</html>

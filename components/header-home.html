@@ -1,0 +1,74 @@
+<header class="header header_home">
+    <img src="<?= get_template_directory_uri() ?>/front-page/images/hero-bg.jpg" alt="" class="hero__image">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <div class="flex-grow-1"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                            <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Destination Wild</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <a href="#" class="nav_login_btn">
+                    <i class="fa-solid fa-user me-2"></i>
+                    Log in
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero hero_home">
+        <div class="hero__content">
+            <h1 class="hero__title">Find Your Next Hike</h1>
+            <div class="w-100">
+                <form aria-label="Search by city, park, or trail name" id="searchBar" action="/category/trails">
+                    <div class="hero__search">
+                        <input type="text" name="q" aria-label="Search by city, park, or trail name" autocomplete="off"
+                            autocorrect="off" class="hero_search_input"
+                            placeholder="Search by city, park, or trail name" spellcheck="false">
+
+                        <button class="hero_search_btn" type="submit">
+                            <svg width="24" height="24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.473 17.887A9.46 9.46 0 0 1 10.5 20a9.5 9.5 0 1 1 9.5-9.5 9.46 9.46 0 0 1-2.113 5.973l5.32 5.32a1 1 0 0 1-1.414 1.414l-5.32-5.32ZM18 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                                    fill="#fff"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="hero_map_link"><a href="/map">Explore nearby trails</a></div>
+        </div>
+    </div>
+</header>
+<div class="hero_vectors">
+    <div class="hero_vector">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="hero_vector_img">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header2.svg" alt="" class="hero_vector_img">
+    </div>
+</div>
