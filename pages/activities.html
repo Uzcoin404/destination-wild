@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header header_home header_activities">
+
+        <!-- <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
+            class="hero__image hero__image-v2"> -->
+            <div class="hero__image-v2"></div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid" style="position: relative;">
+                <div class="flex-grow-1"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/logo.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Destination Wild</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <ul class="user-nav">
+                        <li class="user-nav__item">
+                            <button class="user-nav__btn">
+                                <img src="../images/search-icon.svg" alt="icon" width="33" height="33">
+                            </button>
+                        </li>
+                        <li class="user-nav__item">
+                            <button class="user-nav__btn">
+                                <img src="../images/notification-icon.svg" alt="icon" width="33" height="33">
+                                <span class="user-nav__notification">32</span>
+                            </button>
+                        </li>
+                        <li class="user-nav__item">
+
+                            <div class="dropdown">
+                                <button class="user-nav__btn " href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../images/user-img.png" alt="icon" width="33" height="33">
+                                </button>
+                                <!-- <a class="btn btn-secondary " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Dropdown link
+                                </a> -->
+
+                                <ul class="dropdown-menu dropdown-menu__user-nav">
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/manage-account-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Manage account</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/profile-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Activities</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/completed-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Completed</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/stats-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Stats</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/photos-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Photos</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/reviews-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Reviews</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/log-out-icon.svg" alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Log out</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                </div>
+                </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -1,11 +1,7 @@
 :root {
     color-scheme: dark;
 }
-body {
-    background-color: #212530;
-    --bs-body-color: #fff;
-    font-family: "Montserrat", sans-serif;
-}
+
 @media (min-width: 1400px) {
     .container__big {
         max-width: 1800px;
