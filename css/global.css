@@ -20,3 +20,9 @@ a {
     display: inline-block;
     text-decoration: none;
 }
+
+.container-lff {
+    width: 1300px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
