@@ -21,8 +21,19 @@ a {
     text-decoration: none;
 }
 
+span {
+    display: inline-block;
+}
+
 .container-lff {
-    width: 1300px;
+    width: 1350px;
     padding: 0px 20px;
     margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    background: url("../images/activities-section-bg.svg") no-repeat;
+    background-size: cover;
 }
