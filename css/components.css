@@ -319,6 +319,10 @@
     border-radius: 10px;
 }
 
+.completed-card-item+.completed-card-item {
+    margin-top: 42px;
+}
+
 .completed-card-item img {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -423,4 +427,84 @@
     color: #FFFFFF;
     background: #2AA2AA;
     border-radius: 29.1892px;
+}
+
+/* *Select filter */
+
+.filter-select {}
+
+.filter-select-box {
+    position: relative;
+    width: 202px !important;
+    height: 45px;
+    border: none;
+    background: #313641 !important;
+    border-radius: 10px;
+    z-index: 5;
+}
+
+.filter-select-menu {
+    padding: 65px 10px 18px 10px;
+    position: absolute !important;
+    top: -51px !important;
+    left: -3px !important;
+    width: 208px !important;
+    min-height: 346px !important;
+    background: #3A3F4E;
+    opacity: 0.95;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    z-index: 1;
+    /* inset: none !important; */
+    transform: translate3d(0px, 47.2222px, 0px) !important;
+}
+
+.filter-select-menu li {
+    position: relative;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/*
+.filter-select-menu li:hover::before {
+    content: "";
+    position: absolute !important;
+    top: 5px;
+    left: -10px;
+    width: 208px;
+    height: 38px;
+    background: #424753;
+    z-index:-1;
+} */
+
+.filter-select-menu li .form-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 208px;
+    cursor: pointer !important;
+
+}
+
+.filter-select-menu li .form-check:hover::before {
+    content: "";
+    position: absolute !important;
+    top: -3px;
+    left: -10px;
+    width: 208px;
+    height: 38px;
+    background: #424753;
+    z-index: -1;
+}
+
+.filter-select-menu li .form-check .form-check-input {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px !important;
+    cursor: pointer;
+}
+
+.filter-select-menu li .form-check .form-check-label {
+    width: 208px;
+    cursor: pointer;
 }
