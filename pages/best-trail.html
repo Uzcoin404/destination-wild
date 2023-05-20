@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="<?= get_template_directory_uri() ?>/front-page/images/hero-bg.jpg" alt="" class="hero__image">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="hero_vector_img">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="flex-grow-1"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Destination Wild</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <a href="#" class="nav_login_btn">
+                        <i class="fa-solid fa-user me-2"></i>
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Best Dogs on Leash Trails in {City}</h1>
+            </div>
+            <div class="container pb-1">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='7' height='13' viewBox='0 0 7 13' fill='none'%3e%3cpath d='M1 12L5.81654 6.7018C5.92057 6.58738 5.92057 6.41262 5.81654 6.2982L1 1' stroke='white'/%3e%3c/svg%3e&#34;);"
+                    class="pt-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">United States</a></li>
+                        <li class="breadcrumb-item"><a href="#">United States</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Stamford</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="site-main trail_page" role="main">
+        <section class="trail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <p class="trail_location">
+                            <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
+                                class="me-2">
+                            Greatroad, Florida
+                        </p>
+                        <h1 class="trail_title">Hike Cove Island Park Loop Trail</h1>
+                        <div class="trail_middle">
+                            <div class="trail_rate">
+                                3.6
+                                <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3">283 Likes</span>
+                                <div class="avatar_group left">
+                                    <span class="avatar_group_5">
+                                        <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png"
+                                            alt="">
+                                    </span>
+                                    <span class="avatar_group_4">
+                                        <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                    </span>
+                                    <span class="avatar_group_3">
+                                        <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                    </span>
+                                    <span class="avatar_group_2">
+                                        <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                    </span>
+                                    <span class="avatar_group_1">
+                                        <img src="<?= get_template_directory_uri() ?>/images/people/Ellipse 42.png">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trail_buttons">
+                            <button class="trail_buttons_btn">
+                                <span class="trail_btn_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 18 24"
+                                        fill="none">
+                                        <circle cx="4" cy="12" r="3.5" stroke="white" />
+                                        <circle cx="14" cy="4" r="3.5" stroke="white" />
+                                        <path d="M11 18L7 14" stroke="white" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7 10L11 6" stroke="white" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="14" cy="20" r="3.5" stroke="white" />
+                                    </svg>
+                                </span>
+                                Print
+                            </button>
+                            <button class="trail_buttons_btn">
+                                <span class="trail_btn_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_203_18782)">
+                                            <path
+                                                d="M18.8818 4.76242H18.416V0.549586C18.416 0.246101 18.1699 0 17.8663 0H5.13524C4.83152 0 4.58565 0.246101 4.58565 0.549586V4.76237H4.11955C2.30161 4.76237 0.822266 6.24153 0.822266 8.05966V14.8673C0.822266 16.6855 2.30161 18.1646 4.11955 18.1646H4.58565V22.4504C4.58565 22.7539 4.83152 23 5.13524 23H17.8663C18.1699 23 18.4159 22.7539 18.4159 22.4504V18.1646H18.8817C20.6997 18.1646 22.179 16.6855 22.179 14.8673V8.0597C22.1791 6.24153 20.6997 4.76242 18.8818 4.76242ZM5.68478 1.09913H17.3168V4.76242H5.68478V1.09913ZM17.3168 21.901H5.68478V15.1231H17.3168V21.901ZM21.08 14.8673C21.08 16.0795 20.0939 17.0655 18.8818 17.0655H18.416V15.1231H19.6045C19.9082 15.1231 20.1541 14.877 20.1541 14.5735C20.1541 14.27 19.9082 14.0239 19.6045 14.0239H17.8664H5.13524H3.55986C3.25638 14.0239 3.01028 14.27 3.01028 14.5735C3.01028 14.8771 3.25638 15.1231 3.55986 15.1231H4.58565V17.0655H4.11955C2.90745 17.0655 1.92134 16.0794 1.92134 14.8673V8.0597C1.92134 6.8476 2.90745 5.86155 4.11955 5.86155H5.13519H17.8662H18.8818C20.0938 5.86155 21.0799 6.84765 21.0799 8.0597V14.8673H21.08Z"
+                                                fill="white" />
+                                            <path
+                                                d="M17.8672 8.05298C17.4533 8.05298 17.1172 8.38893 17.1172 8.80299C17.1172 9.21704 17.4531 9.55299 17.8672 9.55299C18.2813 9.55299 18.6173 9.21709 18.6173 8.80299C18.6172 8.38893 18.2813 8.05298 17.8672 8.05298Z"
+                                                fill="white" />
+                                            <path
+                                                d="M6.96755 19.0618H16.0351C16.3387 19.0618 16.5847 18.8156 16.5847 18.5122C16.5847 18.2087 16.3386 17.9626 16.0351 17.9626H6.96755C6.66407 17.9626 6.41797 18.2087 6.41797 18.5122C6.41797 18.8157 6.66407 19.0618 6.96755 19.0618Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_203_18782">
+                                                <rect width="23" height="23" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                Share
+                            </button>
+                        </div>
+                        <div class="trail_actions">
+                            <button class="btn trail_action_btn btn-large me-2">
+                                <i class="fa-regular fa-heart me-2"></i>
+                                Save
+                            </button>
+                            <button class="btn trail_action_btn btn-large">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="22" height="17"
+                                    viewBox="0 0 22 17" fill="none">
+                                    <rect x="4.5" y="0.5" width="17" height="12" rx="1.5" stroke="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3 4H2C0.895431 4 0 4.89543 0 6V15C0 16.1046 0.89543 17 2 17H16C17.1046 17 18 16.1046 18 15V14H17V15C17 15.5523 16.5523 16 16 16H2C1.44772 16 1 15.5523 1 15V6C1 5.44772 1.44772 5 2 5H3V4Z"
+                                        fill="white" />
+                                    <path
+                                        d="M9.0798 6.90441L7.6966 8.2947C7.06911 8.9254 7.51584 10 8.40551 10H18C18.5523 10 19 9.55228 19 9V6.16063C19 5.92756 18.9186 5.7018 18.7698 5.52238L17.4155 3.88888C17.0268 3.41997 16.3126 3.40459 15.904 3.85634L12.6687 7.43352C12.3133 7.82641 11.7132 7.87401 11.3004 7.54204L10.4154 6.8304C10.0168 6.50988 9.44054 6.54181 9.0798 6.90441Z"
+                                        fill="white" />
+                                </svg>
+                                View all 157 photos
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p class="trail_about_text mt-3 pt-2">
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
+                            of classical Latin literature
+                            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                            Hampden-Sydney College in Virginia,
+                            looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                            going through the cites of
+                            the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+                            sections 1.10.32 and 1.10.33
+                            of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+                            BC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section__header mt-5">
+                    <h3 class="section__title m-0">Top Rated / Top Trails</h3>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="trail_card">
+                            <a class="trail_card_picture" href="">
+                                <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                    alt="" class="trail_card_img">
+                                <button class="product_card_btn" type="button">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </a>
+                            <div class="trail_card_content">
+                                <div class="d-flex align-items-center my-3">
+                                    <span class="trail_card_tag" data-type="Easy">
+                                        Easy
+                                    </span>
+                                    <div class="trail_card_rate">
+                                        <i class="fa-solid fa-star me-1"></i>
+                                        4.7 (1909)
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <a href="<?php the_permalink(); ?>" class="trail_card_title">
+                                        #1 - Camping tent
+                                    </a>
+                                    <a href="#" class="trail_card_link">Schlaubetal Nature Park</a>
+                                </div>
+                                <p class="trail_card_details mb-5">
+                                    Length:
+                                    <?= round($length) ?> mi • Elevation:
+                                    <?php echo $elevation; ?>
+                                </p>
+                                <p class="trail_card_desc">
+                                    <?= wp_trim_words(get_the_content(), 30); ?>
+                                    <a href="#">Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section__header mt-5">
+                    <h3 class="section__title m-0">Dog Trails in Stamford</h3>
+                </div>
+                <table class="table trals__table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col"># 1 Crossover Trail</td>
+                            <td scope="col">0.3 mi</td>
+                            <td scope="col"><span class="trail_card_tag" data-type="Easy">
+                                    Easy
+                                </span></td>
+                            <td scope="col">Riverside, CT</td>
+                            <td scope="col">
+                                <div class="trail_rate">
+                                    10
+                                    <i class="fa-solid fa-star ms-2 ps-2"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="btn trail_about_btn" style="display: inline-block">
+                    Show more Trails
+                </a>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section__header mt-5">
+                    <h3 class="section__title m-0">Nearby / Dog Hikes</h3>
+                </div>
+                <div class="trail_box_list">
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                    <div class="trail_box_card w-100">
+                        <a href="#" class="trail_box_content">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg"
+                                alt="">
+                        </a>
+                        <h6 class="trail_box_text"><b>312 mi</b></h6>
+                        <p class="trail_box_text">Distance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-5 pb-3">
+            <div class="container">
+                <div class="section__header mt-5">
+                    <h3 class="section__title m-0">Nearby / Dog Hikes</h3>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="trail_card_picture" href="">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg" alt=""
+                                class="trail_card_img">
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </a>
+                        <p class="trail_story_card_text">
+                            Earth day 2020 goes online: How to get involved
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <a class="trail_card_picture" href="">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg" alt=""
+                                class="trail_card_img">
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </a>
+                        <p class="trail_story_card_text">
+                            Earth day 2020 goes online: How to get involved
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <a class="trail_card_picture" href="">
+                            <img src="https://wjh.cde.myftpupload.com/wp-content/uploads/2023/04/B4Jij_TgKiMfuT10dHNeYmQC6KNGXoCR.jpg" alt=""
+                                class="trail_card_img">
+                            <button class="product_card_btn" type="button">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </a>
+                        <p class="trail_story_card_text">
+                            Earth day 2020 goes online: How to get involved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="footer_vector">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header2.svg" alt="" class="footer_vector">
+        <div class="container-xxl">
+            <div class="footer__content">
+                <a href="/">
+                    <img src="<?= get_template_directory_uri() ?>/images/logo-white.svg" alt="">
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Activity Type</b></li>
+                    <li class="footer__link"><a href="#">Backpacking</a></li>
+                    <li class="footer__link"><a href="#">Bike touring</a></li>
+                    <li class="footer__link"><a href="#">Bird watching</a></li>
+                    <li class="footer__link"><a href="#">Camping</a></li>
+                    <li class="footer__link"><a href="#">Cross-country skiing</a></li>
+                    <li class="footer__link"><a href="#">Fishing</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Horseback riding</a></li>
+                    <li class="footer__link"><a href="#">Mountain biking</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Paddle sports</a></li>
+                    <li class="footer__link"><a href="#">Road biking</a></li>
+                    <li class="footer__link"><a href="#">Rock climbing</a></li>
+                    <li class="footer__link"><a href="#">Running</a></li>
+                    <li class="footer__link"><a href="#">Show shoeing</a></li>
+                    <li class="footer__link"><a href="#">Walking</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Attractions</b></li>
+                    <li class="footer__link"><a href="#">Beach</a></li>
+                    <li class="footer__link"><a href="#">Cave</a></li>
+                    <li class="footer__link"><a href="#">Challenging</a></li>
+                    <li class="footer__link"><a href="#">City walk</a></li>
+                    <li class="footer__link"><a href="#">Forest</a></li>
+                    <li class="footer__link"><a href="#">Historic site</a></li>
+                    <li class="footer__link"><a href="#">Long</a></li>
+                    <li class="footer__link"><a href="#">Moderately challenging</a></li>
+                    <li class="footer__link"><a href="#">Not dogs</a></li>
+                    <li class="footer__link"><a href="#">Rails trails</a></li>
+                    <li class="footer__link"><a href="#">River</a></li>
+                    <li class="footer__link"><a href="#">Short</a></li>
+                    <li class="footer__link"><a href="#">Views</a></li>
+                    <li class="footer__link"><a href="#">Waterfall</a></li>
+                    <li class="footer__link"><a href="#">Wildflowers</a></li>
+                    <li class="footer__link"><a href="#">Wildlife</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Suitability</b></li>
+                    <li class="footer__link"><a href="#">Dog on leash</a></li>
+                    <li class="footer__link"><a href="#">Kid friendly</a></li>
+                    <li class="footer__link"><a href="#">Partially paved</a></li>
+                    <li class="footer__link"><a href="#">Paved</a></li>
+                    <li class="footer__link"><a href="#">Stroller friendly</a></li>
+                    <li class="footer__link"><a href="#">Wheelchair friendly</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Company</b></li>
+                    <li class="footer__link"><a href="#">About Destination Wild</a></li>
+                    <li class="footer__link"><a href="#">Press Releases</a></li>
+                    <li class="footer__link"><a href="#">Environment</a></li>
+                    <li class="footer__link"><a href="#">Jobs</a></li>
+                    <li class="footer__link"><a href="#">Privacy Policy</a></li>
+                    <li class="footer__link"><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="footer__social">
+                    <h6 class="footer_social_text mb-3 pb-2">Follow us</h6>
+                    <div class="row">
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer_c_text">Destination Wild © 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        new Splide('#essentials', {
+            gap: 25,
+            pagination: false,
+            perPage: 4
+        }).mount();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

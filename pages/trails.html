@@ -68,7 +68,7 @@
         </nav>
         <div class="hero">
             <div class="hero__content">
-                <h1 class="hero__title">Trail Profile</h1>
+                <h1 class="hero__title">Trails</h1>
             </div>
             <div class="container pb-1">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='7' height='13' viewBox='0 0 7 13' fill='none'%3e%3cpath d='M1 12L5.81654 6.7018C5.92057 6.58738 5.92057 6.41262 5.81654 6.2982L1 1' stroke='white'/%3e%3c/svg%3e&#34;);"
@@ -87,7 +87,7 @@
         <section class="trail">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <p class="trail_location">
                             <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg" alt=""
                                 class="me-2">
@@ -186,49 +186,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div id="main-carousel" class="splide">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                            alt="">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                            alt="">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                            alt="">
-                                    </li>
-                                </ul>
-                            </div>
-                            <button class="product_card_btn" type="button">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <a href="#" class="trail_moderete_btn">
-                                Moderete
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="thumbnail-carousel" class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                    alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                    alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                    alt="">
-                            </li>
-                        </ul>
+                    <div class="col-7">
+
                     </div>
                 </div>
                 <div class="trail_box_list">
@@ -562,7 +521,7 @@
                         <p class="trail_box_text">Distance</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row gx-5">
                     <div class="col-6">
                         <p class="trail_about_text">
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
@@ -592,217 +551,118 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <h5 class="section__title mb-3">Weather</h5>
-                        <div class="row" style="--bs-gutter-y: 12px;">
-                            <div class="col-12">
-                                <div class="trail_weather_box">
-                                    <p class="trail_weather_text">Friday</p>
-                                    <h3 class="trail_weather_title">
-                                        <i class="fa-solid fa-cloud-bolt"></i>
-                                        -7° C
-                                    </h3>
-                                </div>
+                        <div class="trail_rating">
+                            <div class="center_between">
+                                <h5 class="essential_card_title">Rating</h5>
+                                <a href="#" class="btn trail_rating_btn">Write Review</a>
                             </div>
-                            <div class="col-4">
-                                <div class="trail_weather_box">
-                                    <p class="trail_weather_text">Friday</p>
-                                    <h3 class="trail_weather_title">
-                                        <i class="fa-solid fa-cloud-bolt"></i>
-                                    </h3>
-                                    <p class="trail_weather_text">-3° / -7° C</p>
-                                </div>
+                            <div class="trail_rate">
+                                <span>4.9</span>
+                                <i class="fa-solid fa-star ms-3 ps-2"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
                             </div>
-                            <div class="col-4">
-                                <div class="trail_weather_box">
-                                    <p class="trail_weather_text">Friday</p>
-                                    <h3 class="trail_weather_title">
-                                        <i class="fa-solid fa-cloud-bolt"></i>
-                                    </h3>
-                                    <p class="trail_weather_text">-3° / -7° C</p>
-                                </div>
+                            <div class="trail_rating_stat center_between">
+                                <p>Interesting</p>
+                                <span class="trail_rating_line">
+                                    <span style="width: 100%;"></span>
+                                </span>
                             </div>
-                            <div class="col-4">
-                                <div class="trail_weather_box">
-                                    <p class="trail_weather_text">Friday</p>
-                                    <h3 class="trail_weather_title">
-                                        <i class="fa-solid fa-cloud-bolt"></i>
-                                    </h3>
-                                    <p class="trail_weather_text">-3° / -7° C</p>
-                                </div>
+                            <div class="trail_rating_stat center_between">
+                                <p>Guide</p>
+                                <span class="trail_rating_line">
+                                    <span style="width: 100%;"></span>
+                                </span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="nearby_trails mb-5 pb-3">
-            <div class="container">
-                <div class="section__header mt-5">
-                    <h3 class="section__title m-0">Nearby trails</h3>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        <div class="trail_card2">
-                            <div class="trail_card2_content">
-                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
-                                    alt="">
+                            <div class="trail_rating_stat center_between">
+                                <p>Service</p>
+                                <span class="trail_rating_line">
+                                    <span style="width: 90%;"></span>
+                                </span>
                             </div>
-                            <h5 class="trail_card2_title">Camping tent</h5>
-                            <p class="trail_card2_text">Mountain hardwear Trango 4 person tent</p>
-                            <div class="trail_card2_rate">
-                                <i class="fa-solid fa-star me-1"></i>
-                                4.7 (1909)
+                            <div class="trail_rating_stat center_between">
+                                <p>Price</p>
+                                <span class="trail_rating_line">
+                                    <span style="width: 80%;"></span>
+                                </span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="essentials">
-            <div class="container container__big">
-                <div class="section__header mt-5">
-                    <h3 class="section__title m-0">Everyday Essentials</h3>
-                    <div class="gear_wizard">
-                        <span>Chat with Gear Wizard!</span>
-                        <div class="gear_wizard_img ms-3">
-                            <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/people/Ellipse 42.png"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="splide mb-5" id="essentials">
-                    <div class="splide__arrows">
-                        <button class="splide__arrow splide__arrow--prev">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <button class="splide__arrow splide__arrow--next">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="essential_card">
-                                    <div class="essential_card_content">
-                                        <h3 class="essential_card_title">Fujifilm Instax
-                                            Swuare SQ6</h3>
-                                        <img src="../images/Group 5907.png" alt="" class="essential_card_img">
+                        <div class="trail_review_list">
+                            <div class="center_between align-items-start">
+                                <h5 class="trail_reviews_title">Reviews (54)</h5>
+                                <a href="#" class="trail_reviews_all">View all</a>
+                            </div>
+                            <div class="trail_review">
+                                <a href="#" class="trail_review_profile">
+                                    <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/people/Ellipse 42.png"
+                                        alt="">
+                                    <div>
+                                        <div class="trail_review_content">
+                                            <h6 class="mb-0"><b>Stephanie</b></h6>
+                                            <p class="mb-0 ms-2">October, 2019</p>
+                                        </div>
+                                        <div class="trail_rate">
+                                            <span>10</span>
+                                            <i class="fa-solid fa-star ms-2"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
-                                    <p class="essential_card_text">
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature
-                                        from 45 BC.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="essential_card">
-                                    <div class="essential_card_content">
-                                        <h3 class="essential_card_title">Fujifilm Instax
-                                            Swuare SQ6</h3>
-                                        <img src="../images/image 78.png" alt="" class="essential_card_img">
+                                </a>
+                                <p class="trail_review_text">
+                                    This is a great way to experience the Grand Canyon from Phoenix. I could never have done this trip on my own... <a href="#">Read More</a>
+                                </p>
+                            </div>
+                            <div class="trail_review">
+                                <a href="#" class="trail_review_profile">
+                                    <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/people/Ellipse 42.png"
+                                        alt="">
+                                    <div>
+                                        <div class="trail_review_content">
+                                            <h6 class="mb-0"><b>Stephanie</b></h6>
+                                            <p class="mb-0 ms-2">October, 2019</p>
+                                        </div>
+                                        <div class="trail_rate">
+                                            <span>10</span>
+                                            <i class="fa-solid fa-star ms-2"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
-                                    <p class="essential_card_text">
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature
-                                        from 45 BC.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="essential_card">
-                                    <div class="essential_card_content">
-                                        <h3 class="essential_card_title">Fujifilm Instax
-                                            Swuare SQ6</h3>
-                                        <img src="../images/Group 5907.png" alt="" class="essential_card_img">
+                                </a>
+                                <p class="trail_review_text">
+                                    This is a great way to experience the Grand Canyon from Phoenix. I could never have done this trip on my own... <a href="#">Read More</a>
+                                </p>
+                            </div>
+                            <div class="trail_review">
+                                <a href="#" class="trail_review_profile">
+                                    <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/people/Ellipse 42.png"
+                                        alt="">
+                                    <div>
+                                        <div class="trail_review_content">
+                                            <h6 class="mb-0"><b>Stephanie</b></h6>
+                                            <p class="mb-0 ms-2">October, 2019</p>
+                                        </div>
+                                        <div class="trail_rate">
+                                            <span>10</span>
+                                            <i class="fa-solid fa-star ms-2"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
-                                    <p class="essential_card_text">
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature
-                                        from 45 BC.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="essential_card">
-                                    <div class="essential_card_content">
-                                        <h3 class="essential_card_title">Fujifilm Instax
-                                            Swuare SQ6</h3>
-                                        <img src="../images/image 78.png" alt="" class="essential_card_img">
-                                    </div>
-                                    <p class="essential_card_text">
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature
-                                        from 45 BC.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="essential_card">
-                                    <div class="essential_card_content">
-                                        <h3 class="essential_card_title">Fujifilm Instax
-                                            Swuare SQ6</h3>
-                                        <img src="../images/Group 5907.png" alt="" class="essential_card_img">
-                                    </div>
-                                    <p class="essential_card_text">
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature
-                                        from 45 BC.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="search_suggestions mb-3 pb-2">
-            <div class="container container__big">
-                <div class="row">
-                    <div class="col-9">
-                        <h4 class="essential_card_title">People found “Hike Cove Island Park” by searching by...</h4>
-                        <div class="row mt-4 pt-3">
-                            <ul class="col-3">
-                                <li class="searching__by"><a href="#">Backpacking</a></li>
-                                <li class="searching__by"><a href="#">Bike touring</a></li>
-                                <li class="searching__by"><a href="#">Bird watching</a></li>
-                                <li class="searching__by"><a href="#">Camping</a></li>
-                                <li class="searching__by"><a href="#">Cross-country skiing</a></li>
-                                <li class="searching__by"><a href="#">Fishing</a></li>
-                            </ul>
-                            <ul class="col-3">
-                                <li class="searching__by"><a href="#">Backpacking</a></li>
-                                <li class="searching__by"><a href="#">Bike touring</a></li>
-                                <li class="searching__by"><a href="#">Bird watching</a></li>
-                                <li class="searching__by"><a href="#">Camping</a></li>
-                                <li class="searching__by"><a href="#">Cross-country skiing</a></li>
-                                <li class="searching__by"><a href="#">Fishing</a></li>
-                            </ul>
-                            <ul class="col-3">
-                                <li class="searching__by"><a href="#">Backpacking</a></li>
-                                <li class="searching__by"><a href="#">Bike touring</a></li>
-                                <li class="searching__by"><a href="#">Bird watching</a></li>
-                                <li class="searching__by"><a href="#">Camping</a></li>
-                                <li class="searching__by"><a href="#">Cross-country skiing</a></li>
-                                <li class="searching__by"><a href="#">Fishing</a></li>
-                            </ul>
-                            <ul class="col-3">
-                                <li class="searching__by"><a href="#">Backpacking</a></li>
-                                <li class="searching__by"><a href="#">Bike touring</a></li>
-                                <li class="searching__by"><a href="#">Bird watching</a></li>
-                                <li class="searching__by"><a href="#">Camping</a></li>
-                                <li class="searching__by"><a href="#">Cross-country skiing</a></li>
-                                <li class="searching__by"><a href="#">Fishing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <h4 class="essential_card_title">Near me</h4>
-                        <div class="row mt-3">
-                            <a href="#" class="col-12 near__me">Hiking</a>
-                            <a href="#" class="col-12 near__me">Backpacking</a>
-                            <a href="#" class="col-12 near__me">Camping</a>
-                            <a href="#" class="col-12 near__me">Bird watching</a>
+                                </a>
+                                <p class="trail_review_text">
+                                    This is a great way to experience the Grand Canyon from Phoenix. I could never have done this trip on my own... <a href="#">Read More</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -900,26 +760,6 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let main = new Splide('#main-carousel', {
-                rewind: true,
-                arrows: false,
-                fade: true
-            });
-            let thumbnails = new Splide('#thumbnail-carousel', {
-                gap: 8,
-                drag: false,
-                fixedWidth: '240px',
-                rewind: false,
-                pagination: false,
-                isNavigation: true,
-            });
-
-            main.sync(thumbnails);
-            main.mount();
-            thumbnails.mount();
-
-        });
         new Splide('#essentials', {
             gap: 25,
             pagination: false,
