@@ -23,8 +23,10 @@
 <body>
 
     <header class="header">
-        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt="" class="hero__image">
-        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header1.svg" alt="" class="hero_vector_img">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
+            class="hero__image">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header1.svg" alt=""
+            class="hero_vector_img">
 
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -68,62 +70,67 @@
             </div>
         </nav>
         <div class="hero">
-            <h2 class="auth_title">Welcome Back!</h2>
-            <div class="auth_paper" id="login">
-                <div class="center_between">
-                    <button class="btn auth_btn me-2" id="facebook_btn">
-                        <i class="fa-brands fa-facebook-f me-2"></i>
-                        Facebook
-                    </button>
-                    <button class="btn auth_btn ms-1" id="twitter_btn">
-                        <i class="fa-brands fa-twitter me-2"></i>
-                        Twitter
-                    </button>
+            <div class="auth">
+                <h2 class="auth_title">Welcome Back!</h2>
+                <div class="auth_paper" id="login">
+                    <div class="center_between">
+                        <button class="btn auth_btn me-2" id="facebook_btn">
+                            <i class="fa-brands fa-facebook-f me-2"></i>
+                            Facebook
+                        </button>
+                        <button class="btn auth_btn ms-1" id="twitter_btn">
+                            <i class="fa-brands fa-twitter me-2"></i>
+                            Twitter
+                        </button>
+                    </div>
+                    <p class="auth_via_email auth__text">or log in with email</p>
+                    <form action="#">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="auth_input form-control" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput" class="auth_label">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="auth_input form-control" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword" class="auth_label">Password</label>
+                        </div>
+                        <a href="#" class="forgot_password_text auth__text">Forgot password?</a>
+                        <button type="submit" id="auth_submit_btn" class="btn auth_btn mb-2">
+                            Log in
+                        </button>
+                        <button type="button" id="auth_google_btn" class="btn auth_btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="me-2">
+                                <g clip-path="url(#clip0_203_28439)">
+                                    <path
+                                        d="M10.2031 8.18188V12.0546H15.6948C15.4536 13.3001 14.73 14.3547 13.6447 15.0638L16.9563 17.582C18.8859 15.8366 19.999 13.2729 19.999 10.2275C19.999 9.51837 19.9341 8.83648 19.8135 8.18199L10.2031 8.18188Z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M4.4845 11.9033L3.73759 12.4636L1.09375 14.4818C2.77279 17.7454 6.21411 20 10.203 20C12.958 20 15.2678 19.1091 16.9562 17.5819L13.6445 15.0636C12.7354 15.6636 11.5758 16.0273 10.203 16.0273C7.54991 16.0273 5.29579 14.2728 4.48868 11.9091L4.4845 11.9033Z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M1.09455 5.51831C0.398847 6.86372 0 8.38193 0 10.0001C0 11.6183 0.398847 13.1365 1.09455 14.4819C1.09455 14.4909 4.4898 11.9 4.4898 11.9C4.28572 11.3 4.16509 10.6637 4.16509 9.99999C4.16509 9.33626 4.28572 8.69993 4.4898 8.09993L1.09455 5.51831Z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M10.2032 3.98184C11.706 3.98184 13.0418 4.49092 14.1086 5.47276L17.0306 2.60914C15.2588 0.990977 12.9583 0 10.2032 0C6.21432 0 2.77279 2.24546 1.09375 5.51822L4.4889 8.10005C5.29591 5.73638 7.55012 3.98184 10.2032 3.98184Z"
+                                        fill="#EA4335" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_203_28439">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Login with Google
+                        </button>
+                        <span class="auth_divider_line"></span>
+                        <a href="#" class="auth__text auth_text2">Don’t have an account?</a>
+                        <a href="./signup.html" id="auth_signup_btn" class="btn auth_btn mb-2">
+                            Sign up
+                        </a>
+                    </form>
                 </div>
-                <p class="auth_via_email auth__text">or log in with email</p>
-                <form action="#">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="auth_input form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput" class="auth_label">Email address</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="password" class="auth_input form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword" class="auth_label">Password</label>
-                    </div>
-                    <a href="#" class="forgot_password_text auth__text">Forgot password?</a>
-                    <button type="submit" id="auth_submit_btn" class="btn auth_btn mb-2">
-                        Log in
-                    </button>
-                    <button type="button" id="auth_google_btn" class="btn auth_btn">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
-                            <g clip-path="url(#clip0_203_28439)">
-                                <path
-                                    d="M10.2031 8.18188V12.0546H15.6948C15.4536 13.3001 14.73 14.3547 13.6447 15.0638L16.9563 17.582C18.8859 15.8366 19.999 13.2729 19.999 10.2275C19.999 9.51837 19.9341 8.83648 19.8135 8.18199L10.2031 8.18188Z"
-                                    fill="#4285F4" />
-                                <path
-                                    d="M4.4845 11.9033L3.73759 12.4636L1.09375 14.4818C2.77279 17.7454 6.21411 20 10.203 20C12.958 20 15.2678 19.1091 16.9562 17.5819L13.6445 15.0636C12.7354 15.6636 11.5758 16.0273 10.203 16.0273C7.54991 16.0273 5.29579 14.2728 4.48868 11.9091L4.4845 11.9033Z"
-                                    fill="#34A853" />
-                                <path
-                                    d="M1.09455 5.51831C0.398847 6.86372 0 8.38193 0 10.0001C0 11.6183 0.398847 13.1365 1.09455 14.4819C1.09455 14.4909 4.4898 11.9 4.4898 11.9C4.28572 11.3 4.16509 10.6637 4.16509 9.99999C4.16509 9.33626 4.28572 8.69993 4.4898 8.09993L1.09455 5.51831Z"
-                                    fill="#FBBC05" />
-                                <path
-                                    d="M10.2032 3.98184C11.706 3.98184 13.0418 4.49092 14.1086 5.47276L17.0306 2.60914C15.2588 0.990977 12.9583 0 10.2032 0C6.21432 0 2.77279 2.24546 1.09375 5.51822L4.4889 8.10005C5.29591 5.73638 7.55012 3.98184 10.2032 3.98184Z"
-                                    fill="#EA4335" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_203_28439">
-                                    <rect width="20" height="20" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        Login with Google
-                    </button>
-                    <span class="auth_divider_line"></span>
-                    <a href="#" class="auth__text auth_text2">Don’t have an account?</a>
-                    <a href="./signup.html" id="auth_signup_btn" class="btn auth_btn mb-2">
-                        Sign up
-                    </a>
-                </form>
             </div>
         </div>
     </header>
