@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
+            class="hero__image">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header1.svg" alt=""
+            class="hero_vector_img">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="flex-grow-1"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Destination Wild</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <a href="#" class="nav_login_btn">
+                        <i class="fa-solid fa-user me-2"></i>
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Blog</h1>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+        <div class="blog_wrap">
+            <div id="guides-carousel" class="splide blog_carousel mb-5">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <h3 class="blog__title">Guides</h3>
+                            <div class="blog_card2">
+                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                    alt="" class="blog_card_img">
+                                <div class="blog_card2_content">
+                                    <h4 class="blog_card2_title">Camp under the stars on a volcano</h4>
+                                    <div class="center_between align-items-end">
+                                        <div>
+                                            <span class="blog_card_date_tag">Moderate</span>
+                                            <span class="blog_card_date_tag2">24 Dec 2022</span>
+                                        </div>
+                                        <p class="trail_location">
+                                            <img src="<?= get_template_directory_uri() ?>/images/icons/location.svg"
+                                                alt="" class="me-2">
+                                            Greatroad, Florida
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="#" class="product_card_btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 1H12.7C13.418 1 14 1.58203 14 2.3V13" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13 2L1 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="blog_card">
+                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                    alt="" class="blog_card_img">
+                                <div class="blog_card_content">
+                                    <div class="center_between">
+                                        <span class="blog_card_date_tag">Moderate</span>
+                                        <span class="blog_card_date_tag2">24 Dec 2022</span>
+                                    </div>
+                                    <p class="blog_card_text">Camp under the stars on a volcano</p>
+                                </div>
+                                <a href="#" class="product_card_btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 1H12.7C13.418 1 14 1.58203 14 2.3V13" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13 2L1 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="blog_card">
+                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                    alt="" class="blog_card_img">
+                                <div class="blog_card_content">
+                                    <div class="center_between">
+                                        <span class="blog_card_date_tag">Moderate</span>
+                                        <span class="blog_card_date_tag2">24 Dec 2022</span>
+                                    </div>
+                                    <p class="blog_card_text">Camp under the stars on a volcano</p>
+                                </div>
+                                <a href="#" class="product_card_btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 1H12.7C13.418 1 14 1.58203 14 2.3V13" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13 2L1 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="blog_card">
+                                <img src="https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg"
+                                    alt="" class="blog_card_img">
+                                <div class="blog_card_content">
+                                    <div class="center_between">
+                                        <span class="blog_card_date_tag">Moderate</span>
+                                        <span class="blog_card_date_tag2">24 Dec 2022</span>
+                                    </div>
+                                    <p class="blog_card_text">Camp under the stars on a volcano</p>
+                                </div>
+                                <a href="#" class="product_card_btn">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 1H12.7C13.418 1 14 1.58203 14 2.3V13" stroke="black" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M13 2L1 14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header1.svg" alt="" class="footer_vector">
+        <img src="<?= get_template_directory_uri() ?>/images/icons/header2.svg" alt="" class="footer_vector">
+        <div class="container-xxl">
+            <div class="footer__content">
+                <a href="/">
+                    <img src="<?= get_template_directory_uri() ?>/images/logo-white.svg" alt="">
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Activity Type</b></li>
+                    <li class="footer__link"><a href="#">Backpacking</a></li>
+                    <li class="footer__link"><a href="#">Bike touring</a></li>
+                    <li class="footer__link"><a href="#">Bird watching</a></li>
+                    <li class="footer__link"><a href="#">Camping</a></li>
+                    <li class="footer__link"><a href="#">Cross-country skiing</a></li>
+                    <li class="footer__link"><a href="#">Fishing</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Horseback riding</a></li>
+                    <li class="footer__link"><a href="#">Mountain biking</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Paddle sports</a></li>
+                    <li class="footer__link"><a href="#">Road biking</a></li>
+                    <li class="footer__link"><a href="#">Rock climbing</a></li>
+                    <li class="footer__link"><a href="#">Running</a></li>
+                    <li class="footer__link"><a href="#">Show shoeing</a></li>
+                    <li class="footer__link"><a href="#">Walking</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Attractions</b></li>
+                    <li class="footer__link"><a href="#">Beach</a></li>
+                    <li class="footer__link"><a href="#">Cave</a></li>
+                    <li class="footer__link"><a href="#">Challenging</a></li>
+                    <li class="footer__link"><a href="#">City walk</a></li>
+                    <li class="footer__link"><a href="#">Forest</a></li>
+                    <li class="footer__link"><a href="#">Historic site</a></li>
+                    <li class="footer__link"><a href="#">Long</a></li>
+                    <li class="footer__link"><a href="#">Moderately challenging</a></li>
+                    <li class="footer__link"><a href="#">Not dogs</a></li>
+                    <li class="footer__link"><a href="#">Rails trails</a></li>
+                    <li class="footer__link"><a href="#">River</a></li>
+                    <li class="footer__link"><a href="#">Short</a></li>
+                    <li class="footer__link"><a href="#">Views</a></li>
+                    <li class="footer__link"><a href="#">Waterfall</a></li>
+                    <li class="footer__link"><a href="#">Wildflowers</a></li>
+                    <li class="footer__link"><a href="#">Wildlife</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Suitability</b></li>
+                    <li class="footer__link"><a href="#">Dog on leash</a></li>
+                    <li class="footer__link"><a href="#">Kid friendly</a></li>
+                    <li class="footer__link"><a href="#">Partially paved</a></li>
+                    <li class="footer__link"><a href="#">Paved</a></li>
+                    <li class="footer__link"><a href="#">Stroller friendly</a></li>
+                    <li class="footer__link"><a href="#">Wheelchair friendly</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Company</b></li>
+                    <li class="footer__link"><a href="#">About Destination Wild</a></li>
+                    <li class="footer__link"><a href="#">Press Releases</a></li>
+                    <li class="footer__link"><a href="#">Environment</a></li>
+                    <li class="footer__link"><a href="#">Jobs</a></li>
+                    <li class="footer__link"><a href="#">Privacy Policy</a></li>
+                    <li class="footer__link"><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="footer__social">
+                    <h6 class="footer_social_text mb-3 pb-2">Follow us</h6>
+                    <div class="row">
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer_c_text">Destination Wild © 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        new Splide('#guides-carousel', {
+            gap: 15,
+            pagination: false,
+            autoWidth: true
+            // perPage: 3
+        }).mount();
+    </script>
+</body>
+
+</html>
