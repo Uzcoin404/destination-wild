@@ -1768,6 +1768,36 @@
     border-radius: 10px;
 }
 
+.stats-cart-top {
+    display: flex;
+    align-items: center;
+}
+
+.stats-cart-top__slider {
+    width: 317px;
+    height: 317px;
+    border-radius: 10px !important;
+}
+
+.stats-cart-top__slider-wrap {
+    border-radius: 10px !important;
+}
+
+.carousel-indicators .active {
+    width: 10px !important;
+    height: 10px !important;
+    /* background: #219653 !important; */
+    border-radius: 50% !important;
+    background-clip: padding-box;
+
+}
+
+.custom-indicator-btn {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
 /* *===========
  Stats Start
 =========== */
