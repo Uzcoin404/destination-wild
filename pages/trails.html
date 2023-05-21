@@ -773,3 +773,82 @@
 </body>
 
 </html>
+
+<!-- <div class="col-md-12 mb-4">
+			<form method="get" action="<?php echo esc_url(get_category_link($category_id)); ?>">
+
+				<div class="dropdown__list">
+					<div class="dropdown me-2">
+						<button class="btn filter_dropdown_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							Elevation
+						</button>
+						<div class="dropdown-menu filter__dropdown_menu">
+							<div class="filter__dropdown form-group p-4">
+								<label class="col-form-label" for="elevation_min">Elevation min:</label>
+								<input type="number" id="elevation_min" name="elevation_min" value="<?php echo esc_attr(isset($_GET['elevation_min']) ? $_GET['elevation_min'] : ''); ?>" class="filter__input number__input">
+
+								<label class="col-form-label" for="elevation_max">Elevation max:</label>
+								<input type="number" id="elevation_max" name="elevation_max" value="<?php echo esc_attr(isset($_GET['elevation_max']) ? $_GET['elevation_max'] : ''); ?>" class="filter__input number__input">
+							</div>
+						</div>
+					</div>
+					<div class="dropdown m-2">
+						<button class="btn filter_dropdown_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							Length
+						</button>
+						<div class="dropdown-menu filter__dropdown_menu">
+							<div class="filter__dropdown form-group p-4">
+								<label for="route_length_from" class="col-form-label form-label">Length (from)</label>
+								<input type="number" id="route_length_from" name="length_from" class="filter__input number__input" min="0" step="1" value="<?php echo isset($_GET['length_from']) ? esc_attr($_GET['length_from']) : ''; ?>">
+
+								<label for="route_length_to" class="col-form-label form-label">Length (to)</label>
+								<input type="number" id="route_length_to" name="length_to" class="filter__input number__input" min="0" step="1" value="<?php echo isset($_GET['length_to']) ? esc_attr($_GET['length_to']) : ''; ?>">
+							</div>
+						</div>
+					</div>
+					<div class="dropdown m-2">
+						<button class="btn filter_dropdown_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							Route type
+						</button>
+						<div class="dropdown-menu filter__dropdown_menu">
+							<div class="filter__dropdown form-group p-4">
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="route_type" id="route_type1" value="Loop" <?php echo (isset($_GET['route_type']) && $_GET['route_type'] == 'Loop' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="route_type1">Loop</label>
+								</div>
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="route_type" id="route_type2" value="Out & back" <?php echo (isset($_GET['route_type']) && $_GET['route_type'] == 'Out & back' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="route_type2">Out & back</label>
+								</div>
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="route_type" id="route_type3" value="Point to point" <?php echo (isset($_GET['route_type']) && $_GET['route_type'] == 'Point to point' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="route_type3">Point to point</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown m-2">
+						<button class="btn filter_dropdown_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+							Difficulty
+						</button>
+						<div class="dropdown-menu filter__dropdown_menu">
+							<div class="filter__dropdown form-group p-4">
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="difficulty" id="difficulty1" value="Easy" <?php echo (isset($_GET['difficulty']) && $_GET['difficulty'] == 'Easy' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="difficulty1">Easy</label>
+								</div>
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="difficulty" id="difficulty2" value="Moderate" <?php echo (isset($_GET['difficulty']) && $_GET['difficulty'] == 'Moderate' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="difficulty2">Moderate</label>
+								</div>
+								<div class="form-check ps-0">
+									<input class="form-check-input" type="radio" name="difficulty" id="difficulty3" value="Hard" <?php echo (isset($_GET['difficulty']) && $_GET['difficulty'] == 'Hard' ? 'checked' : ''); ?>>
+									<label class="form-check-label" for="difficulty3">Hard</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="filter_submit_btn">See results</button>
+				</div>
+			</form>
+		</div> -->
