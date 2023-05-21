@@ -1,3 +1,5 @@
+@import url("./global.css");
+
 :root {
     color-scheme: dark;
 }
@@ -389,6 +391,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.product_card_btn i {
+    color: #000;
 }
 .product_card_tag {
     background-color: #fff;
@@ -785,6 +790,7 @@
 }
 .trail_card_tag {
     height: 40px;
+    width: max-content;
     padding: 0 45px;
     margin-right: 24px;
     border-radius: 40px;
@@ -890,6 +896,7 @@
     color: #2a4336;
     top: 25px;
     right: 25px;
+    font-size: 25px;
 }
 .trail_moderete_btn {
     position: absolute;
@@ -903,6 +910,9 @@
     border-radius: 25px;
 }
 
+.splide__pagination {
+    bottom: 40px;
+}
 .splide__pagination__page {
     width: 16px;
     height: 16px;
@@ -1062,5 +1072,214 @@
     line-height: 24px;
     color: rgba(255, 255, 255, 0.5);
 }
+.essentials .section__title {
+    color: #fff;
+    font-size: 31.1108px;
+}
+.gear_wizard {
+    display: flex;
+    align-items: center;
+}
+.gear_wizard_img {
+    position: relative;
+    width: 83px;
+    height: 83px;
+}
+.gear_wizard_img::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #00ff0a;
+}
+.gear_wizard_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.essential_card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.essential_card_content {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6.76322px;
+    padding: 35px 24px 20px;
+    flex-grow: 1;
+}
+.essential_card_title {
+    font-weight: 700;
+    font-size: 31.1108px;
+    line-height: 38px;
+    margin-bottom: 10px;
+}
+.splide__slide .essential_card_img {
+    width: max-content;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+}
+.essential_card_text {
+    font-size: 20.2897px;
+    line-height: 35px;
+    margin-top: 22px;
+    padding: 0 12px;
+}
+.essentials .splide__arrow {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+    font-size: 22px;
+}
+.essentials .splide__arrow:disabled {
+    opacity: 1;
+    cursor: default;
+}
+.essentials .splide__arrow--prev {
+    left: -28.5px;
+}
+.essentials .splide__arrow--next {
+    right: -28.5px;
+}
 
-/* *Photos Page Style */
+.searching__by a {
+    margin-bottom: 12px;
+    color: #fff;
+    font-family: "Manrope";
+}
+.searching__by a:hover {
+    text-decoration: underline;
+}
+.near__me {
+    font-family: "Manrope";
+    font-size: 22px;
+    padding: 16px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 6.76322px;
+    margin-bottom: 4px;
+}
+
+.trail_rating .trail_rate {
+    display: flex;
+    align-items: center;
+    margin: 32px 0 36px;
+}
+.trail_rating .trail_rate span {
+    font-weight: 800;
+    font-size: 58.1407px;
+    line-height: 71px;
+}
+.trail_rating .trail_rate i {
+    font-size: 30px;
+}
+.trail_rating_stat {
+    margin-bottom: 25px;
+}
+.trail_rating_stat p {
+    font-size: 29.0703px;
+    line-height: 35px;
+    line-height: 35px;
+    min-width: 200px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+.trail_rating_line {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.trail_rating_line span {
+    position: absolute;
+    height: 100%;
+    background-color: #2d9cdb;
+}
+
+.trail_reviews_title {
+    font-weight: 500;
+    font-size: 22.263px;
+    margin: 25px 0 40px;
+}
+.trail_reviews_all {
+    font-size: 19.4801px;
+    text-decoration: underline;
+    margin: 25px 0 40px;
+}
+.trail_review_profile img {
+    width: 55px;
+    height: 55px;
+    margin-right: 16px;
+}
+.trail_review_content,
+.trail_review_profile {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.trail_review_content h6,
+.trail_review_content p {
+    font-size: 19.4801px;
+}
+.trail_review_content p {
+    color: rgba(255, 255, 255, 0.5);
+}
+.trail_review_text {
+    font-size: 19.4801px;
+    line-height: 171%;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 22px 0 25px;
+}
+
+.trail_page .trail_card_img {
+    aspect-ratio: 4/3;
+}
+.trail_page .trail_card_content {
+    padding-left: 0;
+}
+.trals__table td {
+    font-weight: 500;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.trals__table tr:nth-child(2n + 1) td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.trals__table tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.trals__table tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.trals__table .trail_card_tag {
+    font-weight: 700;
+}
+.trail_page .trail_box_card {
+    max-width: 200px;
+}
+.trail_page .trail_box_content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.trail_page .trail_box_text {
+    margin-bottom: 0;
+}
+.trail_story_card_text {
+    font-size: 22.95px;
+    line-height: 28px;
+    margin: 28px 0 8px;
+}

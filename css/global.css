@@ -37,3 +37,8 @@ span {
     background: url("../images/activities-section-bg.svg") no-repeat;
     background-size: cover;
 }
+.center_between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
