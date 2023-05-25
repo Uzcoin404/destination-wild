@@ -37,8 +37,29 @@ span {
     background: url("../images/activities-section-bg.svg") no-repeat;
     background-size: cover;
 }
-.center_between{
+
+.center_between {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.el-btn:hover {
+    opacity: 0.8;
+}
+
+.el-btn:active {
+    opacity: 0.6;
+}
+
+.blue-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    background: #1E88E5;
+    border: none;
+    border-radius: 8px;
 }
