@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/media.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+        <section class="completed-section" style="margin-bottom: 62px;">
+            <div style="margin-bottom: 65px;">
+                <ul class="navigation_menu">
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Profile</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Activities</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Completed</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Stats</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Photos</a>
+                    </li>
+                    <li class="navigation_item">
+                        <a href="#" class="navigation_link">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-select">
+                <div class="dropdown ">
+                    <button class="btn btn-secondary dropdown-toggle filter-select-box" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Newest
+                    </button>
+                    <ul class="dropdown-menu filter-select-menu">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Hiking
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Cycling
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault3" checked>
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    Outdoor
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault4" checked>
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    Climbing
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault5" checked>
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    Watersports
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault6" checked>
+                                <label class="form-check-label" for="flexRadioDefault6">
+                                    Fitness
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault7" checked>
+                                <label class="form-check-label" for="flexRadioDefault7">
+                                    Travel
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle filter-select-box" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Activities
+                    </button>
+                    <ul class="dropdown-menu filter-select-menu">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Hiking
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Cycling
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault3" checked>
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    Outdoor
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault4" checked>
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                    Climbing
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault5" checked>
+                                <label class="form-check-label" for="flexRadioDefault5">
+                                    Watersports
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault6" checked>
+                                <label class="form-check-label" for="flexRadioDefault6">
+                                    Fitness
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault7" checked>
+                                <label class="form-check-label" for="flexRadioDefault7">
+                                    Travel
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="completed-card-list">
+                <li class="completed-card-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1673624399228-f2a3d8ec5e19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                        alt="img" width="206" height="165">
+
+                    <div class="completed-card-item-left completed-card-left">
+                        <div class="completed-card-left_date">01-05 MAY 2023</div>
+                        <div class="completed-card-left_one-box one-box">
+                            <img class="one-box_img" src="../images/card-icon.svg" alt="icon">
+                            <div class="one-box_title">
+                                <span class="one-box_title-name">Camping:</span>
+                                Mountain Esther Trail with my friend Jo
+                            </div>
+                        </div>
+
+                        <div class="completed-card-left_bottom">
+                            <div class="left_bottom-text">Distance: <span>16mi</span></div>
+                            <span class="left_bottom-line"></span>
+                            <div class="left_bottom-text">Elevation: <span>343m</span></div>
+                            <span class="left_bottom-line"></span>
+                            <div class="left_bottom-text">Calories: <span>5.643cal</span></div>
+                            <span class="left_bottom-line"></span>
+                            <div class="left_bottom-text">Difficulty: <span class="easy-box">Easy</span></div>
+                            <span class="left_bottom-line"></span>
+                            <div class="left_bottom-text">Distance: <span>16mi</span></div>
+                            <button class="left_bottom-btn">Show on map</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <!-- <li>
+                <div class="add-new-trail">
+                        <button class="add-new-trail__top">
+                            <img class="add-new-trail__top-img" src="../images/plas-icon.svg" alt="icon" width="32" height="32">
+                            <div class="add-new-trail__top-title">Add New Trail</div>
+                        </button>
+
+                        <div class="add-new-trail__wrap">
+                            <div class="add-new-trail__wrap-box">
+                                <select class="form-select add-new-trail__wrap-in" aria-label="Default select example">
+                                    <option selected>Activity</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control add-new-trail__wrap-in" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                                  </div>
+                            </div>
+                          <div class="add-new-trail__inner-wrap">
+                            <div class="add-new-trail__wrap-box-two">
+                                <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Activity</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <span class="left_bottom-line"></span>
+                                  <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Distance</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <span class="left_bottom-line"></span>
+                                  <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Activity</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <span class="left_bottom-line"></span>
+                                  <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Elevation</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <span class="left_bottom-line"></span>
+
+                                  <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Calories</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <span class="left_bottom-line"></span>
+                                  <select class="form-select add-new-trail__wrap-in-2" aria-label="Default select example">
+                                    <option selected>Moving Time</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+
+                            </div>
+                            <button class="add-new-trail__wrap-btn">Add activity</button>
+                          </div>
+                        </div>
+                </div>
+            </li> -->
+
+        </section>
+
+
+</body>
+
+</html>
