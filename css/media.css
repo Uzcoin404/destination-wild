@@ -112,7 +112,7 @@
     .completed-card-left_bottom {
         /* overflow-x: auto; */
         /* overflow-block: auto; */
-
+        overflow: auto;
     }
 
     .left_bottom-btn {
