@@ -6,8 +6,12 @@
 
 body {
     background-color: #212530;
-    --bs-body-color: #fff;
     font-family: "Montserrat", sans-serif;
+    --bs-body-bg: #212530;
+    --bs-body-color: #fff;
+}
+.btn {
+    box-shadow: none !important;
 }
 
 ul {
@@ -27,6 +31,7 @@ span {
 
 .container-lff {
     width: 1350px;
+    max-width: 100%;
     padding: 0px 20px;
     margin: 0 auto;
 }
@@ -43,7 +48,42 @@ span {
     justify-content: space-between;
     align-items: center;
 }
+.full_btn,
+.auth_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-border-radius: 8px;
+}
+.full_blue_btn {
+    --bs-btn-bg: #2d9cdb;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-active-border-color: #2d9cdb;
+    --bs-btn-hover-border-color: #2d9cdb;
+    --bs-btn-active-color: #2d9cdb;
+    --bs-btn-hover-color: #2d9cdb;
+}
 
+.accordion {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-btn-focus-border-color: transparent;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.accordion-button {
+    box-shadow: none !important;
+    font-weight: 700;
+}
 .el-btn:hover {
     opacity: 0.8;
 }
@@ -58,8 +98,8 @@ span {
     line-height: 20px;
     text-align: center;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
-    background: #1E88E5;
+    color: #ffffff;
+    background: #1e88e5;
     border: none;
     border-radius: 8px;
 }

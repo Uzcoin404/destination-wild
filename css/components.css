@@ -405,10 +405,21 @@
     border-radius: 0.3px;
 }
 
+.completed-card-item-left {
+    position: relative;
+    /* height: 180px; */
+}
+
+.completed-card-left_bottom .com{
+    display: flex;
+    align-items: center;
+    width: 870px;
+}
+
 .left_bottom-btn {
     position: absolute;
-    top: 58%;
-    right: 20.2%;
+    bottom: 13%;
+    right: 5px;
     padding: 14px 43px;
     font-weight: 500;
     font-size: 16px;

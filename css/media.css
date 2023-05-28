@@ -83,6 +83,41 @@
         border-radius: 10px 10px 0 0;
         object-fit: cover;
     }
+
+    .completed-card-item-left {
+        width: 1085px;
+
+    }
+
+    .left_bottom-btn {
+        right: 10px;
+        bottom: 20%;
+    }
+
+    /* /////////////////// */
+
+    .add-new-trail__inner-wrap{
+        flex-direction: column;
+    }
+
+    .add-new-trail__wrap {
+        height: 210px;
+        border-radius: 10px;
+    }
+
+    .add-new-trail__wrap-box-two {
+        margin-bottom: 15px;
+    }
+
+    .add-new-trail__wrap::before {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1140px) {
+    .add-new-trail__wrap-box-two {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1090px) {
@@ -92,14 +127,19 @@
     }
 
     .completed-card-left_bottom {
+        width: 100% !important;
+    }
+
+    .completed-card-item-left {
         width: 100%;
     }
 
     .left_bottom-btn {
-        /* position: relative; */
-        top: 70px;
-        right: none;
+        width: 95%;
+        margin: 0 auto;
         left: 0;
+        right: 0;
+        bottom: 10%;
     }
 
     .completed-card-item-left {
@@ -108,20 +148,18 @@
     }
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 870px) {
 
     .completed-card-left_bottom {
-        /* overflow-x: auto; */
-        /* overflow-block: auto; */
-        /* overflow: auto; */
+        overflow: auto !important;
+    }
+
+    .completed-card-left_bottom .com {
+        min-width: 750px;
     }
 
     .left_bottom-btn {
         position: absolute;
-        top: 70px;
-        right: none;
-        left: 0;
-        overflow-wrap: break-word;
     }
 
     .one-box_title {
@@ -131,10 +169,143 @@
     .one-box_title-name {
         font-size: 24px;
     }
+
+    .left_bottom-btn {
+        width: 90%;
+    }
 }
 
+@media only screen and (max-width: 685px) {
 
+    .one-box .one-box_img {
+        width: 35px;
+        height: 35px;
+    }
 
+    .one-box_title-name {
+        font-size: 20px;
+    }
 
+    .one-box_title {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+.add-new-trail__wrap-box-two {
+    overflow: scroll;
+}
+}
+
+@media only screen and (max-width: 580px) {
+
+    .completed-card-left_date {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .completed-card-left_one-box {
+        align-items: center;
+        margin-bottom: 20px;
+
+    }
+
+    .one-box .one-box_img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .one-box_title-name {
+        font-size: 17px;
+        line-height: 22px;
+
+    }
+
+    .one-box_title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .left_bottom-text {
+        font-size: 12px;
+    }
+
+    .completed-card-left_bottom .com {
+        min-width: 700px;
+    }
+
+    .left_bottom-btn {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .add-new-trail__wrap {
+        height: 270px;
+    }
+
+    .add-new-trail__wrap-box .add-new-trail__wrap-in:nth-child(1) {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .form-control .add-new-trail__wrap-in {
+        width: 100%;
+        font-size: 14px !important;
+    }
+
+    .add-new-trail__wrap-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+
+    .completed-card-left {
+        padding: 22px;
+    }
+
+    .completed-card-left_bottom {
+        padding: 10px 14px;
+    }
+
+    .completed-card-item img {
+        height: 180px;
+    }
+
+    .one-box_title-name {
+        font-size: 15px;
+    }
+
+    .one-box_title {
+        font-size: 14px;
+    }
+
+    .left_bottom-text {
+        font-size: 12px;
+    }
+
+    .left_bottom-text span {
+        font-size: 13px;
+    }
+
+    .completed-card-left_date {
+        font-size: 12px;
+    }
+
+    .completed-card-left_bottom .com {
+        width: 600px;
+    }
+
+    .left_bottom-btn {
+        font-size: 14px;
+    }
+
+    .add-new-trail__wrap-btn {
+        font-size: 14px;
+    }
+}
 
 /* ========= ACTIVITIES MEDIA END ========= */

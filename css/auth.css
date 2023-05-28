@@ -13,18 +13,6 @@
     background-color: #fff;
     border-radius: 40px;
 }
-.auth_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    width: 100%;
-    font-weight: 500;
-    font-size: 14px;
-    --bs-btn-padding-x: 20px;
-    --bs-btn-border-radius: 8px;
-    /* --bs-border-width: 2px; */
-}
 .auth_btn i {
     font-size: 20px;
 }
@@ -43,15 +31,6 @@
     --bs-btn-hover-border-color: #3b5998;
     --bs-btn-active-color: #3b5998;
     --bs-btn-hover-color: #3b5998;
-}
-#auth_submit_btn,
-#auth_verify_btn {
-    --bs-btn-bg: #2d9cdb;
-    --bs-btn-hover-bg: transparent;
-    --bs-btn-active-border-color: #2d9cdb;
-    --bs-btn-hover-border-color: #2d9cdb;
-    --bs-btn-active-color: #2d9cdb;
-    --bs-btn-hover-color: #2d9cdb;
 }
 #auth_google_btn,
 #auth_signup_btn {

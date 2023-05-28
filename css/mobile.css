@@ -1,0 +1,222 @@
+.container-sm {
+    max-width: 540px;
+}
+
+.mobile_title,
+.mobile_card_title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 121%;
+}
+.mobile_title a {
+    color: #fff;
+    text-decoration: underline;
+}
+.mobile_title2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.mobile_title3 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+/* Header */
+
+.navbar {
+    padding-top: 20px;
+}
+.nav_page_title {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+}
+
+.nav_back_text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+}
+.nav_back_text i {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.hero .product_card_btn {
+    position: static;
+    color: #219653;
+    font-size: 17px;
+}
+.trail_title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: left;
+    margin-bottom: 0;
+    max-width: 300px;
+    margin-top: 20px;
+}
+.hero .breadcrumb {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+.hero_mobile_text {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.trail_detail_list{
+   font-size: 14px; 
+}
+.hero .mobile_title2{
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+}
+.trail_details{
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.trail_details p:first-child{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Home page */
+
+.activity_box_title {
+    position: absolute;
+    left: 7px;
+    bottom: 11px;
+    color: #fff;
+    margin: 0;
+}
+.activity_box_pin {
+    max-width: 54px;
+    max-height: 42px;
+    top: 40%;
+}
+.activity__box {
+    width: 33.33333333%;
+}
+
+.mobile_card_overflow {
+    overflow-x: auto;
+}
+.mobile_card_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 25px;
+    width: fit-content;
+}
+.mobile_card {
+    width: 150px;
+    margin-right: 12px;
+}
+.mobile_card_content {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.mobile_card_content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.mobile_card_text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.mobile_card .product_card_btn {
+    top: -16.5px;
+    right: 10px;
+    color: #219653;
+    font-size: 18px;
+}
+
+.trail_rating_stat {
+    margin-bottom: 16px;
+}
+.trail_rating_stat p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 120px;
+}
+.trail_rating_line {
+    height: 6px;
+}
+.card2_img::before {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.col-6 .card2_img img {
+    aspect-ratio: 1/1;
+}
+
+.subscribe {
+    display: block;
+    margin-bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(95, 99, 111, 0.77) 0%,
+        #5f636f 43.75%,
+        rgba(95, 99, 111, 0) 100%
+    );
+    padding: 35px 0;
+}
+.subscribe__form {
+    position: relative;
+}
+.subscribe__input {
+    height: 40px;
+    color: rgba(3, 25, 37, 0.5);
+    border: none;
+    background-color: #fff;
+    font-weight: 400;
+    padding: 12px 20px 12px 15px;
+}
+.subscribe__btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    height: auto;
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+    color: rgba(33, 150, 83, 1) !important;
+    font-size: 14px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 15px 0 100px;
+}
+.footer .accordion {
+    --bs-accordion-bg: #181c25;
+    --bs-accordion-active-bg: #181c25;
+}
+.footer .accordion-button {
+    padding-left: 0;
+}
+.footer__social {
+    padding-left: 0;
+    margin: 30px 0;
+}
+.footer_c_text {
+    text-align: left;
+    color: #fff;
+}
+.footer_end_line {
+    height: 1px;
+    background-color: #fff;
+    margin: 13px 0 10px;
+}
+.footer_logo {
+    display: block;
+    width: max-content;
+    margin: 0 auto 30px;
+}
