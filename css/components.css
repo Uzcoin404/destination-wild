@@ -407,7 +407,8 @@
 
 .left_bottom-btn {
     position: absolute;
-    right: 0px;
+    top: 58%;
+    right: 20.2%;
     padding: 14px 43px;
     font-weight: 500;
     font-size: 16px;

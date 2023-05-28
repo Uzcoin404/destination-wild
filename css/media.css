@@ -103,6 +103,7 @@
     }
 
     .completed-card-item-left {
+        position: relative;
         height: 235px;
     }
 }
@@ -112,7 +113,7 @@
     .completed-card-left_bottom {
         /* overflow-x: auto; */
         /* overflow-block: auto; */
-        overflow: auto;
+        /* overflow: auto; */
     }
 
     .left_bottom-btn {
