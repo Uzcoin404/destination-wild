@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header" style="height: 400px; margin-bottom: 30px; z-index: 1;">
+
+        <!-- <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
+            class="hero__image hero__image-v2"> -->
+        <div class="hero__image-v2"></div>
+        <div class="hero__lins"></div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid" style="position: relative;">
+                <div class="flex-grow-1"></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/logo.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Destination Wild</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__actions">
+                    <ul class="user-nav">
+                        <li class="user-nav__item">
+                            <button class="user-nav__btn">
+                                <img src="../images/search-icon.svg" alt="icon" width="33" height="33">
+                            </button>
+                        </li>
+                        <li class="user-nav__item">
+                            <button class="user-nav__btn">
+                                <img src="../images/notification-icon.svg" alt="icon" width="33" height="33">
+                                <span class="user-nav__notification">32</span>
+                            </button>
+                        </li>
+                        <li class="user-nav__item">
+
+                            <div class="dropdown">
+                                <button class="user-nav__btn " href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../images/user-img.png" alt="icon" width="33" height="33">
+                                </button>
+                                <!-- <a class="btn btn-secondary " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Dropdown link
+                                </a> -->
+
+                                <ul class="dropdown-menu dropdown-menu__user-nav">
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/manage-account-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Manage account</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/profile-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Activities</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/completed-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Completed</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/stats-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Stats</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/photos-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Photos</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/reviews-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Reviews</p>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu__user-item">
+                                        <a href="" class="dropdown-menu__user-link">
+                                            <img class="dropdown-menu__user-img" src="../images/log-out-icon.svg"
+                                                alt="icon" width="18" height="18">
+                                            <p class="dropdown-menu__user-text">Log out</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                </div>
+                </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="hero_user">
+            <div class="hero_user-avatar">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="" width="135" height="135">
+                <button class="hero_user-edit">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_203_22403)">
+                            <path
+                                d="M3.75 21.5627V26.2502H8.4375L22.2625 12.4252L17.575 7.7377L3.75 21.5627ZM25.8875 8.8002C26.375 8.3127 26.375 7.5252 25.8875 7.0377L22.9625 4.1127C22.475 3.6252 21.6875 3.6252 21.2 4.1127L18.9125 6.4002L23.6 11.0877L25.8875 8.8002Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_203_22403">
+                                <rect width="30" height="30" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hero_user-wrap">
+                <div class="hero_user-name">Welcome, <br> Eduardo Illiamson!</div>
+                <p class="hero_user-log">San Francisco, CA</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container-lff">
+            <section class="user-main-section" style="margin-bottom: 62px;">
+                <div style="margin-bottom: 65px;">
+                    <ul class="navigation_menu">
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Profile</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Activities</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Completed</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Stats</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Photos</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a href="#" class="navigation_link">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="user-profile">
+                    <div class="user-profile__wrapper">
+                        <div class="user-profile__left">
+                            <form action="#" class="user-profile__form">
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Username:</label>
+                                    <input class="user-profile__form-input" type="text">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Password:</label>
+                                    <input class="user-profile__form-input" type="password">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Name:</label>
+                                    <input class="user-profile__form-input" type="text">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">E-mail:</label>
+                                    <input class="user-profile__form-input" type="email">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">About me:</label>
+                                    <textarea class="user-profile__form-input" name="" id="" cols="30" rows="10"
+                                        maxlength="200"></textarea>
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Phone:</label>
+                                    <input class="user-profile__form-input" type="text">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Date of Birth:</label>
+                                    <input class="user-profile__form-input" type="date">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Address:</label>
+                                    <input class="user-profile__form-input" type="text">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">City, State:</label>
+                                    <input class="user-profile__form-input" type="text">
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Units:</label>
+                                    <div class="user-profile__form-radios">
+                                        <div>
+                                            <input class="user-profile__form-radio" type="radio">
+                                            <label for="">Metric</label>
+                                        </div>
+                                        <div>
+                                            <input class="user-profile__form-radio" type="radio">
+                                            <label for="">Imperial</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Activity time preference:</label>
+                                    <div class="user-profile__form-radios">
+                                        <div>
+                                            <input class="user-profile__form-radio" type="radio">
+                                            <label for="">Speed</label>
+                                        </div>
+                                        <div>
+                                            <input class="user-profile__form-radio" type="radio">
+                                            <label for="">Pace</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Colorie counter info:</label>
+                                    <div class="user-profile__form-select-wrap">
+                                        <select class="form-select user-profile__form-select"
+                                            aria-label="Default select example">
+                                            <option selected>6’ 55’’</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <select class="form-select user-profile__form-select"
+                                            aria-label="Default select example">
+                                            <option selected>66 lbs</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="user-profile__form-inp-wrap">
+                                    <label class="user-profile__form-label" for="#">Marketing language:</label>
+                                    <select class="form-select user-profile__form-select select-size"
+                                        aria-label="Default select example">
+                                        <option selected>66 lbs</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="user-profile__right">
+                            <div class="user-profile__form-new">
+                                <label class="user-profile__form-label" for="#">Account:</label>
+                                <select class="form-select user-profile__form-select select-size2"
+                                    aria-label="Default select example">
+                                    <option selected> <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20.0002 18.125L26.2502 0.625L7.50024 21.875H20.0002L13.7502 39.375L32.5002 18.125"
+                                                fill="#FBB11C" />
+                                        </svg>
+                                        Gold</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="user-profile__avatar-wrap">
+                                <img class="user-profile__img" src="../images/user.jpeg" alt="img" width="465"
+                                    height="465">
+                                <div class="user-profile__right-btn-wrap">
+                                    <input type="file" class="user-profile__right-btn">
+                                    <button class="user-profile__right-btn">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.33625 18.2489C4.33625 19.4953 5.39084 20.5047 6.69295 20.5047H16.1197C17.4217 20.5047 18.4763 19.4953 18.4763 18.2489V4.71415H4.33625V18.2489Z"
+                                                fill="white" />
+                                            <path
+                                                d="M15.53 1.33051L14.3516 0.202637H8.45995L7.28158 1.33051H3.15744V3.58631H19.6541V1.33051H15.53Z"
+                                                fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="activities__title">Favirite activities</div>
+
+                            <div class="activities-wrap">
+                                <div class="activities-wrap__item activities-wrap__item--active ">Backpaking</div>
+                                <div class="activities-wrap__item activities-wrap__item--active ">Backpaking</div>
+                                <div class="activities-wrap__item">Bike touring</div>
+                                <div class="activities-wrap__item">Bird watching</div>
+                                <div class="activities-wrap__item">Camping</div>
+                                <div class="activities-wrap__item">Cross-country skiing</div>
+                                <div class="activities-wrap__item">Fishing</div>
+                                <div class="activities-wrap__item">Hiking</div>
+                                <div class="activities-wrap__item">Horseback riding</div>
+                            </div>
+
+                            <div class="additional_info">
+                                <div class="additional_info__title">Additional Info</div>
+
+                                <button class="additional_info__btn">
+                                    <img class="additional_info__btn-icon" src="../images/plas-icon.svg" alt="icon"
+                                        width="35" height="35">
+                                    Add New Trail
+                                </button>
+                                <button class="additional_info__btn">
+                                    <img class="additional_info__btn-icon" src="../images/notification-icon.svg"
+                                        alt="icon" width="25" height="25">
+                                    Add New Trail
+                                </button>
+                                <button class="additional_info__btn">
+                                    <img class="additional_info__btn-icon" src="../images/icon-close.svg" alt="icon"
+                                        width="25" height="25">
+                                    Add New Trail
+                                </button>
+                                <button class="additional_info__btn">
+                                    <img class="additional_info__btn-icon" src="../images/icon-delete.svg" alt="icon"
+                                        width="25" height="25">
+                                    Add New Trail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-profile__bottom">
+                        <button class="user-profile__bottom-btn">Cancel</button>
+                        <button class="user-profile__bottom-btn bottom-btn--blue">Save Changes</button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <section class="subscribe" id="subscribe" style="padding: 0px 20px;">
+            <div class="subscribe_now">
+                <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/Group 5722.png" alt=""
+                    class="subscribe_now_img" style="position: relative; bottom: -22px;">
+                <div class="subscribe__content">
+                    <h2 class="subscribe__title">Subscribe now!</h2>
+                    <p class="subscribe__text">
+                        Get ready to receive latest news from “Destination Wild”. You will get 10% discount on the
+                        first
+                        try
+                    </p>
+                    <form action="#" class="subscribe__form d-flex w-100">
+                        <input type="email" class="subscribe__input" placeholder="your_email@here.com" required>
+                        <button class="btn subscribe__btn">Subscribe</button>
+                    </form>
+                </div>
+                <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/subscribe.svg" alt=""
+                    class="subscribe_vector subscribe_vector1">
+            </div>
+            <div class="invite_friend">
+                <h2 class="subscribe__title">Invite Your friend</h2>
+                <p class="subscribe__text">
+                    Get ready to receive latest news from “Destination Wild”. You will get 10% discount on the first
+                    try
+                </p>
+                <form action="#" class="subscribe__form d-flex w-100">
+                    <input type="email" class="subscribe__input" placeholder="your_email@here.com" required>
+                    <button class="btn subscribe__btn">Subscribe</button>
+                </form>
+                <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/subscribe.svg" alt=""
+                    class="subscribe_vector subscribe_vector2">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header1.svg" alt=""
+            class="footer_vector">
+        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header2.svg" alt=""
+            class="footer_vector">
+        <div class="container-xxl">
+            <div class="footer__content">
+                <a href="/">
+                    <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/logo-white.svg" alt="">
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Activity Type</b></li>
+                    <li class="footer__link"><a href="#">Backpacking</a></li>
+                    <li class="footer__link"><a href="#">Bike touring</a></li>
+                    <li class="footer__link"><a href="#">Bird watching</a></li>
+                    <li class="footer__link"><a href="#">Camping</a></li>
+                    <li class="footer__link"><a href="#">Cross-country skiing</a></li>
+                    <li class="footer__link"><a href="#">Fishing</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Horseback riding</a></li>
+                    <li class="footer__link"><a href="#">Mountain biking</a></li>
+                    <li class="footer__link"><a href="#">Hiking</a></li>
+                    <li class="footer__link"><a href="#">Paddle sports</a></li>
+                    <li class="footer__link"><a href="#">Road biking</a></li>
+                    <li class="footer__link"><a href="#">Rock climbing</a></li>
+                    <li class="footer__link"><a href="#">Running</a></li>
+                    <li class="footer__link"><a href="#">Show shoeing</a></li>
+                    <li class="footer__link"><a href="#">Walking</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Attractions</b></li>
+                    <li class="footer__link"><a href="#">Beach</a></li>
+                    <li class="footer__link"><a href="#">Cave</a></li>
+                    <li class="footer__link"><a href="#">Challenging</a></li>
+                    <li class="footer__link"><a href="#">City walk</a></li>
+                    <li class="footer__link"><a href="#">Forest</a></li>
+                    <li class="footer__link"><a href="#">Historic site</a></li>
+                    <li class="footer__link"><a href="#">Long</a></li>
+                    <li class="footer__link"><a href="#">Moderately challenging</a></li>
+                    <li class="footer__link"><a href="#">Not dogs</a></li>
+                    <li class="footer__link"><a href="#">Rails trails</a></li>
+                    <li class="footer__link"><a href="#">River</a></li>
+                    <li class="footer__link"><a href="#">Short</a></li>
+                    <li class="footer__link"><a href="#">Views</a></li>
+                    <li class="footer__link"><a href="#">Waterfall</a></li>
+                    <li class="footer__link"><a href="#">Wildflowers</a></li>
+                    <li class="footer__link"><a href="#">Wildlife</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Suitability</b></li>
+                    <li class="footer__link"><a href="#">Dog on leash</a></li>
+                    <li class="footer__link"><a href="#">Kid friendly</a></li>
+                    <li class="footer__link"><a href="#">Partially paved</a></li>
+                    <li class="footer__link"><a href="#">Paved</a></li>
+                    <li class="footer__link"><a href="#">Stroller friendly</a></li>
+                    <li class="footer__link"><a href="#">Wheelchair friendly</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__link mb-2"><b>Company</b></li>
+                    <li class="footer__link"><a href="#">About Destination Wild</a></li>
+                    <li class="footer__link"><a href="#">Press Releases</a></li>
+                    <li class="footer__link"><a href="#">Environment</a></li>
+                    <li class="footer__link"><a href="#">Jobs</a></li>
+                    <li class="footer__link"><a href="#">Privacy Policy</a></li>
+                    <li class="footer__link"><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="footer__social">
+                    <h6 class="footer_social_text mb-3 pb-2">Follow us</h6>
+                    <div class="row">
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer_social_media">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer_c_text">Destination Wild © 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

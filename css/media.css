@@ -1,0 +1,139 @@
+/* ========= ACTIVITIES MEDIA START ========= */
+@media only screen and (max-width: 1145px) {
+    .activities-section {
+        width: 100%;
+    }
+
+    .navigation_menu {
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1005px) {
+    .navigation_menu {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .navigation_menu {
+        overflow-x: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .activities_card-item {
+        width: 200px;
+    }
+
+    .activities_card-item-title {
+        top: 185px;
+        font-size: 20px;
+    }
+
+    .activities_card-item-img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .acti_ca-btn {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+
+    .navigation_link {
+        padding: 18px 20px;
+        font-size: 16px;
+    }
+
+    .activities_card-item {
+        width: 240px;
+    }
+
+    .activities_card-item-img {
+        width: 100%;
+    }
+
+    .activities_card-item-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .activities_card-item-box .acti_ca:nth-child(3) {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* ========= ACTIVITIES MEDIA END ========= */
+
+/* ========= ACTIVITIES MEDIA START ========= */
+
+@media only screen and (max-width: 1210px) {
+    .completed-card-item {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .completed-card-item img {
+        width: 100%;
+        height: 240px;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+
+    .completed-card-left {
+        padding: 25px;
+    }
+
+    .completed-card-left_bottom {
+        width: 100%;
+    }
+
+    .left_bottom-btn {
+        /* position: relative; */
+        top: 70px;
+        right: none;
+        left: 0;
+    }
+
+    .completed-card-item-left {
+        height: 235px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+
+    .completed-card-left_bottom {
+        /* overflow-x: auto; */
+        /* overflow-block: auto; */
+        overflow: auto;
+    }
+
+    .left_bottom-btn {
+        position: absolute;
+        top: 70px;
+        right: none;
+        left: 0;
+        overflow-wrap: break-word;
+    }
+
+    .one-box_title {
+        font-size: 22px;
+    }
+
+    .one-box_title-name {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+/* ========= ACTIVITIES MEDIA END ========= */
