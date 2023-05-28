@@ -13,6 +13,9 @@ body {
 .btn {
     box-shadow: none !important;
 }
+.white_gray {
+    color: rgba(255, 255, 255, 0.5);
+}
 
 ul {
     list-style: none;
