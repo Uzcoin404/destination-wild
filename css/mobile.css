@@ -1,6 +1,13 @@
 .container-sm {
     max-width: 540px;
 }
+@media (max-width: 576px) {
+    .container,
+    .container-sm {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
 
 .mobile_title,
 .mobile_card_title {
@@ -67,19 +74,13 @@
     line-height: 20px;
     margin-bottom: 10px;
 }
-.trail_detail_list{
-   font-size: 14px; 
+.trail_detail_list {
+    font-size: 14px;
 }
-.hero .mobile_title2{
+.hero .mobile_title2 {
     color: #fff;
     display: inline-block;
     margin-top: 20px;
-}
-.trail_details{
-    background-color: rgba(255, 255, 255, 0.08);
-}
-.trail_details p:first-child{
-    color: rgba(255, 255, 255, 0.4);
 }
 
 /* Home page */
@@ -219,4 +220,128 @@
     display: block;
     width: max-content;
     margin: 0 auto 30px;
+}
+
+/* Trail */
+
+.trail {
+    margin-top: 0;
+}
+.trail_details {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.trail_details p {
+    margin: 0;
+}
+.trail_details p:first-child {
+    color: rgba(255, 255, 255, 0.4);
+}
+.trail_about_text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+.trail_about_btn {
+    width: 100%;
+}
+.trail_tag_list {
+    gap: 7px;
+    margin-bottom: 24px;
+}
+.trail__tag {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 13px 10px;
+}
+.section__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+}
+.col-12 .trail_weather_title i {
+    font-size: 44px;
+}
+.trail_weather_title,
+.trail_weather_title i {
+    font-size: 32px;
+}
+.trail_weather_title {
+    margin: 20px 0 16px;
+}
+.trail_weather_text {
+    font-size: 14px;
+}
+.trail_rating_btn {
+    --bs-btn-padding-y: 13px;
+    --bs-btn-padding-x: 21px;
+}
+
+.trail_reviews_title,
+.trail_rating_btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.trail_reviews_all,
+.trail_review_content h6,
+.trail_review_content p,
+.trail_rate span,
+.trail_review_text,
+.trail_card2_title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.trail_rate i {
+    font-size: 14px;
+}
+.trail_review_text {
+    line-height: 24px;
+    margin: 16px 0;
+}
+
+.trail_card2 {
+    width: 150px;
+    margin-right: 12px;
+}
+.trail_card2_text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 4px 0 18px;
+}
+.trail_card2_rate {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+.trail_card2 .splide {
+    height: 250px;
+}
+.splide__pagination__page {
+    width: 10px;
+    height: 10px;
+}
+.splide__pagination {
+    bottom: 10px;
+}
+.splide__track {
+    border-radius: 8px;
+}
+.trail_review_count {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.trail_review_profile_header{
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px 0 30px;
 }

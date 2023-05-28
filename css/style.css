@@ -1165,6 +1165,16 @@
     line-height: 20px;
     --bs-btn-padding-y: 14px;
 }
+.trail_rating_btn{
+    --bs-btn-bg: #219653;
+    --bs-btn-hover-bg: #1c7744;
+    --bs-btn-active-bg: #219653;
+    font-weight: 500;
+    font-size: 21.3984px;
+    line-height: 26px;
+    --bs-btn-padding-y: 18px;
+    --bs-btn-padding-x: 30px;
+}
 
 .trail_about_btn {
     --bs-btn-padding-x: 99px;
@@ -1421,6 +1431,7 @@
     font-size: 19.4801px;
     text-decoration: underline;
     margin: 25px 0 40px;
+    color: #fff;
 }
 
 .trail_review_profile img {
