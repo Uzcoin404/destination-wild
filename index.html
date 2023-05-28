@@ -19,20 +19,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
-<body>
+<body class="desktop">
 
     <header class="header header_home">
         <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
             class="hero__image">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <div class="flex-grow-1"></div>
+                <div class="nav_hidden_items">
+                    <div class="nav__actions">
+                        <a href="#" class="nav_login_btn">
+                            <i class="fa-solid fa-user me-2"></i>
+                            Log in
+                        </a>
+                    </div>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -90,6 +97,7 @@
             </div>
         </div>
     </header>
+
     <div class="hero_vectors">
         <div class="hero_vector">
             <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/images/icons/header1.svg" alt=""
@@ -673,24 +681,32 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 
-    <!-- <script>
-    let heroImages = document.querySelectorAll('.hero__image');
-    let imgIndex = 1;
-    setInterval(() => {
-        heroImages.forEach((img, i) => {
-            if (i !== imgIndex) {
-                img.classList.add('d-none');
+    <script>
+        window.addEventListener('scroll', function () {
+            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if (scrollTop > 0) {
+                document.querySelector('.nav__bottom').classList.add('active')
             } else {
-                img.classList.remove('d-none');
+                document.querySelector('.nav__bottom').classList.remove('active')
             }
-        })
-        if (imgIndex + 1 < heroImages.length) {
-            imgIndex += 1;
-        } else {
-            imgIndex = 0;
-        }
-    }, 5000);
-</script> -->
+        });
+        // let heroImages = document.querySelectorAll('.hero__image');
+        // let imgIndex = 1;
+        // setInterval(() => {
+        //     heroImages.forEach((img, i) => {
+        //         if (i !== imgIndex) {
+        //             img.classList.add('d-none');
+        //         } else {
+        //             img.classList.remove('d-none');
+        //         }
+        //     })
+        //     if (imgIndex + 1 < heroImages.length) {
+        //         imgIndex += 1;
+        //     } else {
+        //         imgIndex = 0;
+        //     }
+        // }, 5000);
+    </script>
 </body>
 
 </html>
