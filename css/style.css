@@ -474,7 +474,8 @@
 
 .product_card_rate i,
 .trail_card_rate i,
-.trail_card2_rate i {
+.trail_card2_rate i,
+.custom_range_text i {
     color: #ffc107;
 }
 

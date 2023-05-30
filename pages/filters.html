@@ -82,21 +82,169 @@
                         </div>
                     </div>
                     <h6 class="filter_form_title">Length</h6>
-                    <div class="filter_form_content none">
+                    <div class="filter_form_content none" id="lengthFilter">
                         <div class="filter_slider">
                             <div class="progress"></div>
                         </div>
                         <div class="range-input">
-                            <input type="range" class="filter_range_input range-min" min="0" max="200" value="0" step="1">
-                            <input type="range" class="filter_range_input range-max" min="0" max="200" value="200" step="1">
+                            <input type="range" class="filter_range_input range-min" min="0" max="200" value="0"
+                                step="1">
+                            <input type="range" class="filter_range_input range-max" min="0" max="200" value="200"
+                                step="1">
                         </div>
-                        <div class="price-input">
-                            <div class="field">
+                        <div class="center_between mt-3 mb-2" id="custom-range">
+                            <div class="custom_range">
                                 <input type="number" class="input-min" value="0" max="200">
+                                <span class="custom_range_text">mi</span>
                             </div>
-                            <div class="field">
+                            <div class="custom_range">
                                 <input type="number" class="input-max" value="200" max="200">
+                                <span class="custom_range_text">mi</span>
                             </div>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Suitability</h6>
+                    <div class="filter_form_content">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity1">
+                            <label class="form-check-label" for="activity1">
+                                Hiking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity2">
+                            <label class="form-check-label" for="activity2">
+                                Road Biking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity3">
+                            <label class="form-check-label" for="activity3">
+                                Hiking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity4">
+                            <label class="form-check-label" for="activity4">
+                                Road Biking
+                            </label>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Attractions</h6>
+                    <div class="filter_form_content">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity1">
+                            <label class="form-check-label" for="activity1">
+                                Hiking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity2">
+                            <label class="form-check-label" for="activity2">
+                                Road Biking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity3">
+                            <label class="form-check-label" for="activity3">
+                                Hiking
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="activity4">
+                            <label class="form-check-label" for="activity4">
+                                Road Biking
+                            </label>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Elevation gain</h6>
+                    <div class="filter_form_content none" id="elevationFilter">
+                        <div class="filter_slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="filter_range_input range-min" min="0" max="1500" value="0"
+                                step="10">
+                            <input type="range" class="filter_range_input range-max" min="0" max="1500" value="1500"
+                                step="10">
+                        </div>
+                        <div class="center_between mt-3 mb-2" id="custom-range">
+                            <div class="custom_range">
+                                <input type="number" class="input-min" value="0" max="1500">
+                                <span class="custom_range_text">mi</span>
+                            </div>
+                            <div class="custom_range">
+                                <input type="number" class="input-max" value="1500" max="1500">
+                                <span class="custom_range_text">mi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Route type</h6>
+                    <div class="filter_form_content">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="routeType1">
+                            <label class="form-check-label" for="routeType1">
+                                Loop
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="routeType2">
+                            <label class="form-check-label" for="routeType2">
+                                Out & Back
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="routeType3">
+                            <label class="form-check-label" for="routeType3">
+                                Point to Point
+                            </label>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Rating</h6>
+                    <div class="filter_form_content none" id="ratingFilter">
+                        <div class="filter_slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="filter_range_input range-min" min="0" max="5" value="0"
+                                step="0.1">
+                            <input type="range" class="filter_range_input range-max" min="0" max="5" value="5"
+                                step="0.1">
+                        </div>
+                        <div class="center_between mt-3 mb-2" id="custom-range">
+                            <div class="custom_range">
+                                <input type="number" class="input-min" value="0" max="5">
+                                <span class="custom_range_text">
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                            <div class="custom_range">
+                                <input type="number" class="input-max" value="5" max="5">
+                                <span class="custom_range_text">
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="filter_form_title">Trail traffic</h6>
+                    <div class="filter_form_content">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="traffic1">
+                            <label class="form-check-label" for="traffic1">
+                                Light
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="traffic2">
+                            <label class="form-check-label" for="traffic2">
+                                Moderate
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="traffic3">
+                            <label class="form-check-label" for="traffic3">
+                                Heavy
+                            </label>
                         </div>
                     </div>
                 </form>
@@ -106,47 +254,69 @@
     </main>
 
     <script>
-        const rangeInput = document.querySelectorAll(".range-input input"),
-            priceInput = document.querySelectorAll(".price-input input"),
-            range = document.querySelector(".filter_slider .progress");
-        let priceGap = 1;
+        const lengthRangeInput = document.querySelectorAll("#lengthFilter .range-input input"),
+            lengthCustomInput = document.querySelectorAll("#lengthFilter #custom-range input"),
+            lengthRange = document.querySelector("#lengthFilter .filter_slider .progress"),
+            eRangeInput = document.querySelectorAll("#elevationFilter .range-input input"),
+            eCustomInput = document.querySelectorAll("#elevationFilter #custom-range input"),
+            eRange = document.querySelector("#elevationFilter .filter_slider .progress"),
+            ratingRangeInput = document.querySelectorAll("#ratingFilter .range-input input"),
+            ratingCustomInput = document.querySelectorAll("#ratingFilter #custom-range input"),
+            ratingRange = document.querySelector("#ratingFilter .filter_slider .progress");
+        let inputGap = 1;
 
-        priceInput.forEach(input => {
-            input.addEventListener("input", e => {
-                let minPrice = parseInt(priceInput[0].value),
-                    maxPrice = parseInt(priceInput[1].value);
-
-                if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max) {
-                    if (e.target.className === "input-min") {
-                        rangeInput[0].value = minPrice;
-                        range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-                    } else {
-                        rangeInput[1].value = maxPrice;
-                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-                    }
-                }
-            });
+        lengthCustomInput.forEach(input => {
+            input.addEventListener("input", e => customInputChange(e, lengthCustomInput, lengthRangeInput, lengthRange, inputGap));
+        });
+        lengthRangeInput.forEach(input => {
+            input.addEventListener("input", e => rangeInputChange(e, lengthCustomInput, lengthRangeInput, lengthRange, inputGap));
         });
 
-        rangeInput.forEach(input => {
-            input.addEventListener("input", e => {
-                let minVal = parseInt(rangeInput[0].value),
-                    maxVal = parseInt(rangeInput[1].value);
+        eCustomInput.forEach(input => {
+            input.addEventListener("input", e => customInputChange(e, eCustomInput, eRangeInput, eRange, inputGap));
+        });
+        eRangeInput.forEach(input => {
+            input.addEventListener("input", e => rangeInputChange(e, eCustomInput, eRangeInput, eRange, inputGap));
+        });
 
-                if ((maxVal - minVal) < priceGap) {
-                    if (e.target.classList.contains('range-min')) {
-                        rangeInput[0].value = maxVal - priceGap
-                    } else {
-                        rangeInput[1].value = minVal + priceGap;
-                    }
-                } else {
-                    priceInput[0].value = minVal;
-                    priceInput[1].value = maxVal;
+        ratingCustomInput.forEach(input => {
+            input.addEventListener("input", e => customInputChange(e, ratingCustomInput, ratingRangeInput, ratingRange, 0.1));
+        });
+        ratingRangeInput.forEach(input => {
+            input.addEventListener("input", e => rangeInputChange(e, ratingCustomInput, ratingRangeInput, ratingRange, 0.1));
+        });
+
+        function customInputChange(e, customInput, rangeInput, range, inputGap) {
+            let minVal = inputGap !== 0.1 ? parseInt(customInput[0].value) : parseFloat(customInput[0].value),
+                maxVal = inputGap !== 0.1 ? parseInt(customInput[1].value) : parseFloat(customInput[1].value);
+
+            if ((maxVal - minVal >= inputGap) && maxVal <= rangeInput[1].max) {
+                if (e.target.classList.contains('input-min')) {
+                    rangeInput[0].value = minVal;
                     range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+                } else {
+                    rangeInput[1].value = maxVal;
                     range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
                 }
-            });
-        });
+            }
+        }
+        function rangeInputChange(e, customInput, rangeInput, range, inputGap) {
+            let minVal = inputGap !== 0.1 ? parseInt(rangeInput[0].value) : parseFloat(rangeInput[0].value),
+                maxVal = inputGap !== 0.1 ? parseInt(rangeInput[1].value) : parseFloat(rangeInput[1].value);
+
+            if ((maxVal - minVal) < inputGap) {
+                if (e.target.classList.contains('range-min')) {
+                    rangeInput[0].value = maxVal - inputGap
+                } else {
+                    rangeInput[1].value = minVal + inputGap;
+                }
+            } else {
+                customInput[0].value = minVal;
+                customInput[1].value = maxVal;
+                range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+                range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+        }
     </script>
 
 </body>
