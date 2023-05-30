@@ -396,6 +396,7 @@
 
 /* ========= BOX PHOTOS MEDIA END ========= */
 
+/* ========= MAIN MEDIA START ========= */
 @media only screen and (max-width: 1150px) {
     .user-profile__wrapper {
         flex-wrap: wrap;
@@ -488,7 +489,7 @@
 }
 
 @media only screen and (max-width: 505px) {
-    .user-profile__bottom  {
+    .user-profile__bottom {
         flex-direction: column-reverse;
     }
 
@@ -514,3 +515,73 @@
         font-size: 14px;
     }
 }
+
+/* ========= USER MAIN MEDIA END ========= */
+
+
+/* ========= STAT MEDIA START ========= */
+
+@media only screen and (max-width: 1320px) {
+    .stat-box__list {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .stat-form-data {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .stat-box__list {
+        gap: 20px;
+    }
+
+    .stat-box__item-top {
+        width: 140px;
+        height: 140px;
+    }
+
+    .stat-box__item {
+        width: 100%;
+    }
+
+    .stat-box__item-top svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stat-box__bold-text {
+        font-size: 16px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .stat-box__text {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    #distance_chart {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .stat-box__item-top {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-box__item {
+        width: 100px;
+    }
+}
+
+/* ========= STAT MAIN MEDIA END ========= */
