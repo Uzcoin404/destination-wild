@@ -340,8 +340,202 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
 }
-.trail_review_profile_header{
+.trail_review_profile_header {
     justify-content: space-between;
     align-items: start;
     margin: 20px 0 30px;
+}
+
+.trals_table_text h6,
+.trals_table_text p,
+.trals__table .trail_rate span,
+.trals__table .trail_card_tag,
+.trail_table_length {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+.trals_table_text h6,
+.trail_table_length {
+    font-weight: 700;
+}
+.trals__table tr:nth-child(2n + 1) td {
+    background-color: transparent;
+}
+.trals__table tr {
+    padding: 0 0 4px 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.trals__table tr:nth-child(2n + 1) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.trals__table .trail_rate span,
+.trail_table_length {
+    color: rgba(255, 255, 255, 0.4);
+}
+.trals__table .trail_card_tag {
+    height: 29px;
+    width: 160px;
+    justify-content: center;
+}
+.table > :not(caption) > * > * {
+    padding: 4px 8px;
+}
+
+/* Filters */
+
+.filter_form_title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+.filter_form_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.filter_form_content.three {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+}
+.filter_form_content.none {
+    display: block;
+    gap: 0;
+}
+.filters .form-check {
+    display: flex;
+    align-items: center;
+}
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #219653;
+    margin: auto 8px auto 0;
+}
+.form-check-input:hover,
+.form-check-input:focus {
+    background-color: rgba(33, 150, 84, 0.25);
+}
+.form-check-input:checked,
+.form-check-input:active {
+    background-color: #219653;
+    border-color: #219653;
+    background-size: 11px 11px;
+}
+.form-check-input:checked[type="checkbox"] {
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M1 5.5L4.5 9L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.form-check-input:focus {
+    border-color: #219653;
+    box-shadow: 0 0 0 0.25rem rgba(33, 150, 84, 0.25);
+}
+.form-check-input:checked[type="radio"],
+.form-check-input:active[type="radio"] {
+    background-size: 18px 18px;
+}
+
+.price-input {
+    width: 100%;
+    display: flex;
+    margin: 30px 0 35px;
+}
+.price-input .field {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+}
+.field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 19px;
+    margin-left: 12px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #999;
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.price-input .separator {
+    width: 130px;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+.filter_slider {
+    height: 5px;
+    position: relative;
+    background: #ddd;
+    border-radius: 5px;
+}
+.filter_slider .progress {
+    height: 100%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background: #219653;
+}
+.range-input {
+    position: relative;
+}
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.filter_range_input[type="range"]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #219653;
+    pointer-events: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7px;
+    -webkit-appearance: none;
+}
+.filter_range_input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #219653;
+    pointer-events: auto;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7px;
+    border: none;
+    -moz-appearance: none;
+}
+.filter_range_input[type="range"]:first-child::-webkit-slider-thumb {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M5.66802 12.0001L7 10.5901L2.67341 6.00006L7 1.41006L5.66802 5.92443e-05L4.29138e-07 6.00006L5.66802 12.0001Z' fill='white'/%3E%3C/svg%3E");
+}
+.filter_range_input[type="range"]:first-child::-moz-range-thumb {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M5.66802 12.0001L7 10.5901L2.67341 6.00006L7 1.41006L5.66802 5.92443e-05L4.29138e-07 6.00006L5.66802 12.0001Z' fill='white'/%3E%3C/svg%3E");
+}
+.filter_range_input[type="range"]:last-child::-webkit-slider-thumb {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M1.33198 6.10352e-05L0 1.41006L4.32659 6.00006L0 10.5901L1.33198 12.0001L7 6.00006L1.33198 6.10352e-05Z' fill='white'/%3E%3C/svg%3E");
+}
+.filter_range_input[type="range"]:last-child::-moz-range-thumb {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M1.33198 6.10352e-05L0 1.41006L4.32659 6.00006L0 10.5901L1.33198 12.0001L7 6.00006L1.33198 6.10352e-05Z' fill='white'/%3E%3C/svg%3E");
 }
