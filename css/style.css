@@ -1929,9 +1929,9 @@ ul.blog_post_text {
  Photos Start
 =========== */
 .boxs {
-    width: 1315px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 32px;
     margin-top: 2rem;
 }
@@ -2341,8 +2341,8 @@ ul.blog_post_text {
     gap: 0 4px;
 }
 
-.user-profile__right-btn-wrap .user-profile__right-btn:nth-child(1) {
-    width: 155px;
+.user-profile__right-btn-file {
+    padding: 0px 19px;
 }
 
 .user-profile__right-btn {
