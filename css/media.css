@@ -585,3 +585,100 @@
 }
 
 /* ========= STAT MAIN MEDIA END ========= */
+
+
+/* ========= ACTIVITIES MEDIA START ========= */
+@media only screen and (max-width: 1300px) {
+
+    .stats-card-bottom {
+        flex-wrap: wrap;
+    }
+
+    .stats-card-bottom__left {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+
+    .stats-iframe {
+        width: 100%;
+    }
+
+    .stats-card-bottom__right {
+        width: 100%;
+    }
+
+    .stats-card-bottom__right img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .stat-form-data {
+        position: relative;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .stats-cart-top {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .stats-cart-top__slider {
+        width: 100% !important;
+    }
+
+    .stats-cart-top__slider-wrap {
+        width: 100% !important;
+    }
+
+    .stats-cart-top__slider-item {
+        width: 100% !important;
+    }
+
+    .stats-cart-top__slider-item .stats-card-slider-img {
+        display: inline-block;
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 935px) {
+    .stats-card-top__list {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .stats-card {
+        padding: 20px;
+    }
+
+    .stats-card-top__left-info-date {
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .stats-card-top__left-bold-text {
+        font-size: 20px;
+    }
+
+    .stats-card-top__left-text {
+        margin-bottom: 0px;
+        font-size: 16px;
+    }
+
+    .stats-card-top__left-text {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+}
+
+/* ========= ACTIVITIES MEDIA END ========= */
