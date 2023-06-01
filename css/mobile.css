@@ -49,6 +49,59 @@
     font-size: 14px;
     vertical-align: middle;
 }
+.nav__center {
+    display: flex;
+    align-items: center;
+}
+.nav__search {
+    position: relative;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.nav_search_icon {
+    background-color: transparent;
+    border: none;
+}
+.nav_search_icon.active {
+    display: none;
+}
+.nav__search i {
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #219653;
+}
+.nav_search_input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 18px 0 36px;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(3, 25, 37, 0.5);
+    appearance: none;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+.nav_search_input:hover,
+.nav_search_input:focus,
+.nav_search_input:active {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.nav__search.active {
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.3s;
+}
+.nav__search.active + .nav_page_title {
+    display: none;
+}
 
 .hero .product_card_btn {
     position: static;
@@ -81,6 +134,47 @@
     color: #fff;
     display: inline-block;
     margin-top: 20px;
+}
+.mobile_header_tab {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 12px 0 3px;
+    font-weight: 500 !important;
+    font-size: 12px;
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: #ccc;
+    --bs-nav-underline-link-active-color: #ddd;
+}
+.nav-underline .nav-link {
+    border-bottom: none;
+    position: relative;
+    padding-bottom: 20px;
+}
+.nav-underline .nav-link::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.nav-underline .nav-link:hover::before,
+.nav-underline .nav-link.active::before {
+    background-color: #219653;
+}
+
+.hero_bg_pagination {
+    margin-top: -5px;
+}
+.hero_bg_pagination .splide__pagination__page {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.hero_bg_pagination .splide__pagination__page.active {
+    width: 10px;
+    height: 10px;
+    background-color: #219653;
 }
 
 /* Home page */
@@ -154,6 +248,40 @@
 }
 .col-6 .card2_img img {
     aspect-ratio: 1/1;
+}
+
+.iphone_slider {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+.iphone_slider_img {
+    width: 100%;
+    height: calc(115vw - 32px);
+    margin-bottom: 66vw;
+    border-radius: 8px;
+}
+.iphone_slider_title {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    padding: 16px 0 8px;
+}
+.iphone_slider_content {
+    padding-top: calc(115vw - 104px);
+    background: url("../images/iphone.png") no-repeat center / contain;
+}
+.iphone_slider_text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 200px;
+    margin: 0 auto;
 }
 
 .subscribe {
@@ -422,6 +550,8 @@
 }
 .form-check-input:hover,
 .form-check-input:focus {
+    border-color: #219653;
+    box-shadow: 0 0 0 0.25rem rgba(33, 150, 84, 0.25);
     background-color: rgba(33, 150, 84, 0.25);
 }
 .form-check-input:checked,
@@ -432,10 +562,6 @@
 }
 .form-check-input:checked[type="checkbox"] {
     --bs-form-check-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M1 5.5L4.5 9L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-.form-check-input:focus {
-    border-color: #219653;
-    box-shadow: 0 0 0 0.25rem rgba(33, 150, 84, 0.25);
 }
 .form-check-input:checked[type="radio"],
 .form-check-input:active[type="radio"] {
@@ -458,7 +584,7 @@
 .custom_range input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-.custom_range_text{
+.custom_range_text {
     font-size: 14px;
 }
 .filter_slider {

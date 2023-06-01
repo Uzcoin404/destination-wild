@@ -22,8 +22,8 @@
 <body class="desktop">
 
     <header class="header header_home">
-        <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
-            class="hero__image">
+        <!-- <img src="https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg" alt=""
+            class="hero__image"> -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <div class="nav_hidden_items">
@@ -93,7 +93,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="hero_map_link"><a href="/map">Explore nearby trails</a></div>
+                <ul class="hero_bg_pagination" role="tablist">
+                    <li role="presentation">
+                        <button class="splide__pagination__page active" type="button" role="tab" tabindex="-1"></button>
+                        <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                        <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                        <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                        <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -682,30 +690,44 @@
         crossorigin="anonymous"></script>
 
     <script>
-        window.addEventListener('scroll', function () {
-            let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            if (scrollTop > 0) {
-                document.querySelector('.nav__bottom').classList.add('active')
-            } else {
-                document.querySelector('.nav__bottom').classList.remove('active')
-            }
-        });
-        // let heroImages = document.querySelectorAll('.hero__image');
-        // let imgIndex = 1;
-        // setInterval(() => {
-        //     heroImages.forEach((img, i) => {
-        //         if (i !== imgIndex) {
-        //             img.classList.add('d-none');
-        //         } else {
-        //             img.classList.remove('d-none');
-        //         }
-        //     })
-        //     if (imgIndex + 1 < heroImages.length) {
-        //         imgIndex += 1;
-        //     } else {
-        //         imgIndex = 0;
-        //     }
-        // }, 5000);
+        let header = document.querySelector('.header'),
+            slideButtons = document.querySelectorAll('.splide__pagination__page'),
+            images = [
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg",
+                "https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg",
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg",
+                "https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg",
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg"
+            ],
+            bgIndex = 0,
+            slideDuration = 5000,
+            intervalId;
+
+        window.addEventListener('load', function () {
+            intervalId = setInterval(() => {
+                setHeaderBackground();
+                if (bgIndex + 1 >= images.length) {
+                    bgIndex = 0;
+                } else {
+                    bgIndex += 1;
+                }
+            }, slideDuration)
+            slideButtons.forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    bgIndex = index;
+                    setHeaderBackground();
+                    // clearInterval(intervalId);
+                    // setTimeout(startInterval, slideDuration);
+                });
+            });
+
+        })
+
+        function setHeaderBackground() {
+            header.style.backgroundImage = `linear-gradient(rgba(33, 37, 48, 0.7), rgba(33, 37, 48, 0.7)), url("${images[bgIndex]}")`
+            slideButtons.forEach(btn => btn.classList.remove('active'));
+            slideButtons[bgIndex].classList.add('active');
+        }
     </script>
 </body>
 
