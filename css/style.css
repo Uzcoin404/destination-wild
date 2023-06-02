@@ -1708,11 +1708,11 @@ ul.blog_post_text {
 =========== */
 
 .card__photos {
-    width: 1359px;
     height: 455px;
-    margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
     gap: 14px;
 }
 
@@ -1762,55 +1762,7 @@ ul.blog_post_text {
     text-decoration: none;
 }
 
-.card__photo-1 {
-    width: 252px;
-    height: 100%;
-    background: radial-gradient(
-        48.25% 20.86% at 98.88% 90.47%,
-        #303644 0%,
-        #282d3a 100%
-    );
-    border-radius: 40px;
-    padding-bottom: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card__photo-2 {
-    width: 252px;
-    height: 100%;
-    background: radial-gradient(
-        48.25% 20.86% at 98.88% 90.47%,
-        #303644 0%,
-        #282d3a 100%
-    );
-    border-radius: 40px;
-    padding-bottom: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card__photo-3 {
-    width: 252px;
-    height: 100%;
-    background: radial-gradient(
-        48.25% 20.86% at 98.88% 90.47%,
-        #303644 0%,
-        #282d3a 100%
-    );
-    border-radius: 40px;
-    padding-bottom: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card__photo-4 {
+.card__photo {
     width: 252px;
     height: 100%;
     background: radial-gradient(
@@ -1829,10 +1781,6 @@ ul.blog_post_text {
 .card__photo-img {
     object-fit: cover;
     border-radius: 40px 40px 0px 0px;
-    -webkit-border-radius: 40px 40px 0px 0px;
-    -moz-border-radius: 40px 40px 0px 0px;
-    -ms-border-radius: 40px 40px 0px 0px;
-    -o-border-radius: 40px 40px 0px 0px;
 }
 
 .card__photo-icon {
