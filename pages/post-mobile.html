@@ -23,7 +23,7 @@
 <body>
 
     <header class="header header_mobile">
-        <img src="../images/Head.png" alt="" class="hero__image">
+        <!-- <img src="../images/Head.png" alt="" class="hero__image"> -->
 
         <nav class="navbar navbar-dark">
             <div class="container-fluid">
@@ -222,9 +222,18 @@
                         </ul>
                     </div>
                 </div>
-                <p class="nav_page_title">Hunt/Fish</p>
+                <div class="nav__center">
+                    <form action="#" class="nav__search">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="search" class="nav_search_input" name="q" id="search"
+                            placeholder="Search by city, park or trail..">
+                    </form>
+                    <p class="nav_page_title">Hunt/Fish</p>
+                </div>
                 <div class="nav__actions">
-                    <i class="fa-solid fa-search"></i>
+                    <button type="button" class="nav_search_icon">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
                     <!-- <a href="#" class="nav_login_btn ms-3">
                         Log in
                     </a> -->
@@ -277,11 +286,23 @@
                         12 km of Trails
                     </li>
                 </ul>
-                <div class="text-end">
-                    <a href="#" class="mobile_title2">
-                        <i class="fa-regular fa-images"></i>
-                        157 photos
-                    </a>
+                <div class="center_between mt-4">
+                    <ul class="hero_bg_pagination" role="tablist">
+                        <li role="presentation">
+                            <button class="splide__pagination__page active" type="button" role="tab"
+                                tabindex="-1"></button>
+                            <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                            <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                            <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                            <button class="splide__pagination__page" type="button" role="tab" tabindex="-1"></button>
+                        </li>
+                    </ul>
+                    <div class="text-end">
+                        <a href="#" class="mobile_title2 mt-0">
+                            <i class="fa-regular fa-images"></i>
+                            157 photos
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -768,6 +789,58 @@
     </footer>
 
     <script>
+
+        let header = document.querySelector('.header'),
+            slideButtons = document.querySelectorAll('.splide__pagination__page'),
+            images = [
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg",
+                "https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg",
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg",
+                "https://cdn-assets.alltrails.com/assets/hero-images/hero-logged-out-4-w2800-7232acbbc3145d13071c1528a802880c44618365f3926fb0eb361532613dadf3.jpg",
+                "https://wjh.cde.myftpupload.com/wp-content/themes/blabber/front-page/images/hero-bg.jpg"
+            ],
+            bgIndex = 0,
+            slideDuration = 5000,
+            intervalId;
+
+        window.addEventListener('load', function () {
+            intervalId = setInterval(() => {
+                setHeaderBackground();
+                if (bgIndex + 1 >= images.length) {
+                    bgIndex = 0;
+                } else {
+                    bgIndex += 1;
+                }
+            }, slideDuration)
+            slideButtons.forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    bgIndex = index;
+                    setHeaderBackground();
+                    // clearInterval(intervalId);
+                    // setTimeout(startInterval, slideDuration);
+                });
+            });
+
+        })
+
+        function setHeaderBackground() {
+            header.style.backgroundImage = `linear-gradient(rgba(33, 37, 48, 0.7), rgba(33, 37, 48, 0.7)), url("${images[bgIndex]}")`
+            slideButtons.forEach(btn => btn.classList.remove('active'));
+            slideButtons[bgIndex].classList.add('active');
+        }
+
+        let navSearchIcon = document.querySelector('.nav_search_icon');
+        let navSearch = document.querySelector('.nav__search');
+        navSearchIcon.addEventListener('click', function () {
+            navSearch.classList.add('active');
+            this.classList.add('active');
+            navSearch.querySelector('#search').focus()
+        })
+        navSearch.querySelector('#search').addEventListener('focusout', function () {
+            navSearch.classList.remove('active');
+            navSearchIcon.classList.remove('active');
+        })
+
         let cardCarousels = document.querySelectorAll('.trail_card2_carousel');
         cardCarousels.forEach((carousel) => {
             new Splide(carousel, {

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="../css/activities.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header-user">
+
+        <div class="hero">
+            <div class="container">
+                <nav class="hero-nav-mobile">
+                    <button class="hero-nav-mobile__btn-back btn-br-none">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12L7.41 10.59L2.83 6L7.41 1.41L6 1.23266e-07L3.29016e-06 6L6 12Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                    <div class="hero-nav-mobile__title">Profile</div>
+                    <button class="hero-nav-mobile__btn-edit btn-br-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_145_1494)">
+                                <path
+                                    d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_145_1494">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </nav>
+
+                <div class="hero-user-top">
+                    <div class="hero-user-top__wrap">
+                        <img src="../images/user.jpeg" alt="user-img" width="66" height="66">
+
+                        <div>
+                            <div class="hero-user-top__wrap-name">Eduardo illiamson</div>
+                            <div class="hero-user-top__wrap-location">San Francisco, CA</div>
+                        </div>
+                    </div>
+
+                    <button class="btn-br-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5"
+                                d="M10.09 15.59L11.5 17L16.5 12L11.5 7L10.09 8.41L12.67 11H3V13H12.67L10.09 15.59ZM19 3H5C3.89 3 3 3.9 3 5V9H5V5H19V19H5V15H3V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hero-user-list-wrap">
+                    <div class="hero-user-slob"></div>
+                    <ul class="hero-user-list">
+                        <li class="hero-user-list__item active-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21 11C21 15.9706 16.9706 20 12 20C7.02944 20 3 15.9706 3 11C3 6.02944 7.02944 2 12 2C16.9706 2 21 6.02944 21 11ZM14.6471 7.82353C14.6471 9.28546 13.4619 10.4706 12 10.4706C10.5381 10.4706 9.35294 9.28546 9.35294 7.82353C9.35294 6.3616 10.5381 5.17647 12 5.17647C13.4619 5.17647 14.6471 6.3616 14.6471 7.82353ZM6.10612 13.3806C7.10836 12.7724 9.15644 11.5294 12 11.5294C16.2353 11.5294 18.8824 13.6471 18.8824 13.6471C18.8824 13.6471 17.2941 17.8824 12 17.8824C7.34118 17.8824 5.64706 13.6471 5.64706 13.6471C5.76053 13.5903 5.91414 13.4971 6.10612 13.3806Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+                            <div class="hero-user-list__item-text">Activities</div>
+                        </li>
+                        <li class="hero-user-list__item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.4737 11C17.4737 14.023 15.023 16.4737 12 16.4737C8.97696 16.4737 6.52631 14.023 6.52631 11C6.52631 7.97696 8.97696 5.52631 12 5.52631C13.1723 5.52631 14.2586 5.89486 15.1492 6.52242L16.9538 4.71786C15.5914 3.64207 13.8707 3 12 3C7.58172 3 4 6.58172 4 11C4 15.4183 7.58172 19 12 19C16.4183 19 20 15.4183 20 11C20 9.91468 19.7839 8.87984 19.3923 7.93617L17.3739 9.95454C17.4394 10.2929 17.4737 10.6425 17.4737 11Z"
+                                        fill="white" />
+                                    <path d="M9.5 10L12 12.5L20.5 4" stroke="white" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+
+                            <div class="hero-user-list__item-text">Completed</div>
+                        </li>
+                        <li class="hero-user-list__item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5" clip-path="url(#clip0_157_2792)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7 2C4.79086 2 3 3.79086 3 6V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16V6C21 3.79086 19.2091 2 17 2H7ZM7.75 4.25C6.36929 4.25 5.25 5.36929 5.25 6.75V15.25C5.25 16.6307 6.36929 17.75 7.75 17.75H16.25C17.6307 17.75 18.75 16.6307 18.75 15.25V6.75C18.75 5.36929 17.6307 4.25 16.25 4.25H7.75Z"
+                                        fill="white" />
+                                    <path d="M9 17V12" stroke="white" stroke-width="2" />
+                                    <path d="M12 17V10" stroke="white" stroke-width="2" />
+                                    <path d="M15 17V8" stroke="white" stroke-width="2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_157_2792">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <div class="hero-user-list__item-text">Stats</div>
+                        </li>
+                        <li class="hero-user-list__item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <rect x="5" y="4" width="16" height="11" rx="1" stroke="white" stroke-width="2" />
+                                    <path
+                                        d="M9.0798 9.90441L7.6966 11.2947C7.06911 11.9254 7.51584 13 8.40551 13H18C18.5523 13 19 12.5523 19 12V9.16063C19 8.92756 18.9186 8.7018 18.7698 8.52238L17.4155 6.88888C17.0268 6.41997 16.3126 6.40459 15.904 6.85634L12.6687 10.4335C12.3133 10.8264 11.7132 10.874 11.3004 10.542L10.4154 9.8304C10.0168 9.50988 9.44054 9.54181 9.0798 9.90441Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3 6C1.89543 6 1 6.89543 1 8V17C1 18.1046 1.89543 19 3 19H17C18.1046 19 19 18.1046 19 17H17H3V8V6Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+
+                            <div class="hero-user-list__item-text">Photos</div>
+                        </li>
+                        <li class="hero-user-list__item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path
+                                        d="M11.1602 2.299C11.5542 1.68955 12.4458 1.68955 12.8398 2.299L15.5533 6.49633C15.6882 6.70504 15.8961 6.85604 16.1363 6.91987L20.9667 8.20354C21.6681 8.38993 21.9436 9.23786 21.4857 9.80091L18.3323 13.6787C18.1755 13.8715 18.0962 14.1158 18.1097 14.364L18.3815 19.3547C18.421 20.0793 17.6997 20.6034 17.0227 20.3419L12.3603 18.5412C12.1284 18.4516 11.8716 18.4516 11.6397 18.5412L6.9773 20.3419C6.30032 20.6034 5.57902 20.0793 5.61849 19.3547L5.89033 14.364C5.90385 14.1158 5.82447 13.8715 5.66766 13.6787L2.51429 9.80091C2.05642 9.23786 2.33194 8.38993 3.03331 8.20354L7.86373 6.91987C8.10393 6.85604 8.31175 6.70504 8.44669 6.49633L11.1602 2.299Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+                            <div class="hero-user-list__item-text">Reviews</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav nav__bottom">
+            <ul class="nav_bottom_list">
+                <li class="nav_bottom_item">
+                    <a href="#">
+                        <i class="fa-solid fa-compass"></i>
+                        Explore
+                    </a>
+                </li>
+                <li class="nav_bottom_item">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i>
+                        Saved
+                    </a>
+                </li>
+                <li class="nav_bottom_item">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_330_95)">
+                                <path
+                                    d="M19 3H4.99C3.88 3 3.01 3.89 3.01 5L3 19C3 20.1 3.88 21 4.99 21H19C20.1 21 21 20.1 21 19V5C21 3.89 20.1 3 19 3ZM19 15H15C15 16.66 13.65 18 12 18C10.35 18 9 16.66 9 15H4.99V5H19V15Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_330_95">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        About
+                    </a>
+                </li>
+                <li class="nav_bottom_item">
+                    <a href="#">
+                        <i class="fa-solid fa-user-large"></i>
+                        Profile
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+        <div class="container">
+            <section class="activities-section">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Accordion Item #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Accordion Item #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        let cardCarousels = document.querySelectorAll('.trail_card2_carousel');
+        cardCarousels.forEach((carousel) => {
+            new Splide(carousel, {
+                arrows: false,
+                width: 150,
+                height: 250,
+                perPage: 1
+            }).mount();
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
