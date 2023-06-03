@@ -1224,3 +1224,56 @@ body {
     border: 1px solid #FFFFFF;
     border-radius: 8px;
 }
+
+/* Profile Edit Style */
+
+.edit-profile-main {
+    justify-content: space-between;
+    gap: 0 26px;
+}
+
+.edit-profile-main input {
+    width: 300px !important;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.profile-info-main__dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    width: 300px;
+}
+
+@media only screen and (max-width: 435px) {
+    .edit-profile-main input {
+        width: 200px !important;
+    }
+
+    .profile-info-main__dropdown {
+        width: 200px !important;
+    }
+}
+
+.profile-edit-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50%;
+    background-color: #2F3546;
+}
+
+.profile-edit-dropdown::after {
+    display: none;
+}
+
+.profile-info-main__dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    width: 300px;
+}
