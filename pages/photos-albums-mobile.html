@@ -192,17 +192,125 @@
 
     <main id="main" class="site-main" role="main">
         <div class="container">
-            <section class="photos-section">
-                <div class="no-photos-info">
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M1 1L33 33M9.88889 2.77778H25.8889C27.3034 2.77778 28.6599 3.33968 29.6601 4.33988C30.6603 5.34007 31.2222 6.69662 31.2222 8.11111V24.1111M2.77778 22.3335L9.88889 15.2224C11.5387 13.6348 13.5724 13.6348 15.2222 15.2224L24.1111 24.1112M24.68 17.6043C25.7058 17.4994 26.7458 17.8923 27.6667 18.7776L31.2222 22.3331M29.6596 29.6613C28.6593 30.6609 27.303 31.2224 25.8889 31.2222H8.11111C6.69662 31.2222 5.34007 30.6603 4.33988 29.6601C3.33968 28.6599 2.77778 27.3034 2.77778 25.8889V8.11111C2.77778 6.63022 3.38222 5.28978 4.35644 4.32267L29.6596 29.6613Z"
-                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                        <circle cx="21.5" cy="9.5" r="2" stroke="white" />
-                    </svg>
-                    <div class="no-photos-info__title">No photos added yet</div>
-                </div>
+            <section class="">
+                <ul class="albums-mobile-card-list">
+                    <li class="albums-mobile-card-item">
+                        <div class="albums-mobile">
+                            <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators stats-cart-top__indicator-wrap">
+                                    <button type="button" class="custom-indicator-btn active"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                                        aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" class="custom-indicator-btn"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" class="custom-indicator-btn"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner albums-mobile-slider__inner">
+                                    <div class="carousel-item active stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="al-card-item__text-1">
+                            Hike Cove Island Park Loop Trail
+                        </div>
+                        <div class="al-card-item__text-2">
+                            Rocky Mountain National Park
+                        </div>
+                        <div class="al-card-item__text-3">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_153_1718)">
+                                    <path
+                                        d="M13.1075 5.50424C13.0672 5.37521 12.9616 5.28304 12.8334 5.26198L9.01174 4.69319L7.29199 1.07243C7.23417 0.951304 7.116 0.874939 6.98777 0.874939C6.85954 0.874939 6.74137 0.951304 6.68355 1.07507L4.98643 4.70636L1.16476 5.30148C1.03654 5.32254 0.930937 5.41471 0.890709 5.54374C0.850481 5.67277 0.885681 5.81496 0.978708 5.90713L3.75193 8.7221L3.11079 12.7089C3.08817 12.8432 3.14096 12.9775 3.24656 13.0565C3.30439 13.1012 3.37479 13.1249 3.44519 13.1249C3.5005 13.1249 3.5533 13.1118 3.60359 13.0828L7.01543 11.1895L10.4373 13.0617C10.4876 13.0881 10.5404 13.1012 10.5932 13.1012C10.7793 13.1012 10.9326 12.9406 10.9326 12.7457C10.9326 12.7168 10.9301 12.6904 10.9226 12.6641L10.2613 8.70104L13.0169 5.87026C13.115 5.77547 13.1477 5.63327 13.1075 5.50424ZM9.66293 8.32448C9.58248 8.40611 9.54728 8.52461 9.56739 8.64047L10.1432 12.098L7.17131 10.4732C7.07326 10.4179 6.95509 10.4206 6.85452 10.4732L3.89273 12.1164L4.44838 8.65364C4.46598 8.53777 4.43078 8.42191 4.35032 8.34028L1.94669 5.8966L5.26299 5.38047C5.37362 5.36204 5.46916 5.29094 5.51693 5.18561L6.99028 2.03358L8.48375 5.17771C8.53404 5.28304 8.62958 5.35414 8.7402 5.37257L12.059 5.86763L9.66293 8.32448Z"
+                                        fill="#FFC107" />
+                                    <path
+                                        d="M9.66293 8.32448C9.58248 8.40611 9.54728 8.52461 9.56739 8.64047L10.1432 12.098L7.17131 10.4732C7.07326 10.4179 6.95509 10.4206 6.85452 10.4732L3.89273 12.1164L4.44838 8.65364C4.46598 8.53777 4.43078 8.42191 4.35032 8.34028L1.94669 5.8966L5.26299 5.38047C5.37362 5.36204 5.46916 5.29094 5.51693 5.18561L6.99028 2.03358L8.48375 5.17771C8.53404 5.28304 8.62958 5.35414 8.7402 5.37257L12.059 5.86763L9.66293 8.32448Z"
+                                        fill="#FFC107" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_153_1718">
+                                        <rect width="14" height="14" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            4,7 (1909)
+                        </div>
+                    </li>
+                    <li class="albums-mobile-card-item">
+                        <div class="albums-mobile">
+                            <div id="carouselExampleIndicators" class="carousel slide">
+                                <div class="carousel-indicators stats-cart-top__indicator-wrap">
+                                    <button type="button" class="custom-indicator-btn active"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                                        aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" class="custom-indicator-btn"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" class="custom-indicator-btn"
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner albums-mobile-slider__inner">
+                                    <div class="carousel-item active stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item stats-cart-top__slider-item">
+                                        <img src="https://images.unsplash.com/photo-1682685796014-2f342188a635?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="al-card-item__text-1">
+                            Hike Cove Island Park Loop Trail
+                        </div>
+                        <div class="al-card-item__text-2">
+                            Rocky Mountain National Park
+                        </div>
+                        <div class="al-card-item__text-3">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_153_1718)">
+                                    <path
+                                        d="M13.1075 5.50424C13.0672 5.37521 12.9616 5.28304 12.8334 5.26198L9.01174 4.69319L7.29199 1.07243C7.23417 0.951304 7.116 0.874939 6.98777 0.874939C6.85954 0.874939 6.74137 0.951304 6.68355 1.07507L4.98643 4.70636L1.16476 5.30148C1.03654 5.32254 0.930937 5.41471 0.890709 5.54374C0.850481 5.67277 0.885681 5.81496 0.978708 5.90713L3.75193 8.7221L3.11079 12.7089C3.08817 12.8432 3.14096 12.9775 3.24656 13.0565C3.30439 13.1012 3.37479 13.1249 3.44519 13.1249C3.5005 13.1249 3.5533 13.1118 3.60359 13.0828L7.01543 11.1895L10.4373 13.0617C10.4876 13.0881 10.5404 13.1012 10.5932 13.1012C10.7793 13.1012 10.9326 12.9406 10.9326 12.7457C10.9326 12.7168 10.9301 12.6904 10.9226 12.6641L10.2613 8.70104L13.0169 5.87026C13.115 5.77547 13.1477 5.63327 13.1075 5.50424ZM9.66293 8.32448C9.58248 8.40611 9.54728 8.52461 9.56739 8.64047L10.1432 12.098L7.17131 10.4732C7.07326 10.4179 6.95509 10.4206 6.85452 10.4732L3.89273 12.1164L4.44838 8.65364C4.46598 8.53777 4.43078 8.42191 4.35032 8.34028L1.94669 5.8966L5.26299 5.38047C5.37362 5.36204 5.46916 5.29094 5.51693 5.18561L6.99028 2.03358L8.48375 5.17771C8.53404 5.28304 8.62958 5.35414 8.7402 5.37257L12.059 5.86763L9.66293 8.32448Z"
+                                        fill="#FFC107" />
+                                    <path
+                                        d="M9.66293 8.32448C9.58248 8.40611 9.54728 8.52461 9.56739 8.64047L10.1432 12.098L7.17131 10.4732C7.07326 10.4179 6.95509 10.4206 6.85452 10.4732L3.89273 12.1164L4.44838 8.65364C4.46598 8.53777 4.43078 8.42191 4.35032 8.34028L1.94669 5.8966L5.26299 5.38047C5.37362 5.36204 5.46916 5.29094 5.51693 5.18561L6.99028 2.03358L8.48375 5.17771C8.53404 5.28304 8.62958 5.35414 8.7402 5.37257L12.059 5.86763L9.66293 8.32448Z"
+                                        fill="#FFC107" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_153_1718">
+                                        <rect width="14" height="14" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            4,7 (1909)
+                        </div>
+                    </li>
+                </ul>
+
+               <div class="photos-btn-wrap">
                 <bottom class="photos-bottom" onclick="importData()">Add Photo</bottom>
+               </div>
             </section>
         </div>
     </main>

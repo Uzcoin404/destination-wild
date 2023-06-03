@@ -778,7 +778,7 @@ body {
     top: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0) 87.5%, #000000 100%);
-    z-index: 1;
+    z-index: -1;
 
 }
 
@@ -1069,4 +1069,72 @@ body {
     background-color: #fff;
     border: 1px solid #FFFFFF;
     border-radius: 8px;
+}
+
+/* Albums Mobile */
+
+.albums-mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 148px;
+    height: 148px;
+    margin-bottom: 15px;
+}
+
+.albums-mobile-slider__inner {
+    width: 148px;
+    height: 148px;
+    border-radius: 10px;
+}
+
+.albums-mobile-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.albums-mobile-card-item {
+    width: 148px;
+}
+
+.al-card-item__text-1 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.al-card-item__text-2 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    text-decoration-line: underline;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.al-card-item__text-3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators {
+    margin-bottom: 0rem;
+}
+
+.photos-btn-wrap {
+    display: flex;
+    justify-content: center;
 }
