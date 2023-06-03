@@ -1443,109 +1443,142 @@ body {
 
 /* Photos Slider */
 
-.wrap {
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    padding: 0 60px;
-    background: url(https://images.unsplash.com/photo-1485069203392-8e1aeb1ebf02?auto=format&fit=crop&w=1054&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    overflow: hidden;
-  }
-
-  .wrap:after {
-    content:'';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.5);
-  }
-
-  .slider {
-    position: relative;
-    z-index: 200;
-    padding: 0 0px;
-    margin: 5rem auto;
-    max-width: 800px;
-    width: 100%;
-  }
-
-  .slick-arrow {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: -25px;
+.slick-slider {
+    display: flex !important;
+    height: 460px !important;
+    background-color: transparent !important;
     border: none;
-    background: transparent;
-    color: #fff;
-    font-family: monospace;
-    font-size: 5rem;
-    z-index: 300;
-    outline: none;
-  }
+}
 
-  .slick-prev {
-    left: -50px;
-    text-align: left;
-  }
+.slick-slider::before {
+    display: none !important;
+}
 
-  .slick-next {
-    right: -50px;
-    text-align: right;
-  }
-
-
-
-  .item.slick-slide {
-    width: 400px;
-    height: 400px !important;
-    transition: transform .4s;
+.slick-initialized .slick-slide img {
     position: relative;
-  }
+    width: 207px !important;
+    height: 460px;
+    background: #001630;
+    opacity: 0.3;
+    border-radius: 20px;
+    /* background-color: rgba(0, 0, 0, 0.8) !important; */
 
-  .slick-slide:after {
-    content:'';
+}
+
+/* .slick-initialized .slick-slide {
+    position: relative !important;
+} */
+
+/* .slick-initialized .slick-slide::before {
+    content: "";
+    width: 208px;
+    height: 460px;
+    border-radius: 20px;
     position: absolute;
-    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
-    transition: transform .4s;
-  }
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10 !important;
+} */
 
-  .item.slick-slide {
-    transform: scale(0.7)  translate(640px);
-  }
+.clip {
+    position: relative !important;
+    border-radius: 20px !important;
+}
 
-  .item.slick-slide.slick-center + .slick-slide {
-    transform: scale(0.8) translate(-250px);
-    z-index: 10;
-  }
+.photos-slider__wrap  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    transform: scale(0.7);
+    transition: all 0.8s ease;
+}
 
-  .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
-    transform: scale(0.7)  translate(-640px);
-    z-index: 5;
-  }
-
-  .item.slick-slide.slick-active {
-    transform: scale(0.8) translate(250px);
-  }
-
-  .item.slick-slide.slick-center {
-    /* margin: 0 -10%; */
+.slick-center .photos-slider__wrap {
+    left: 15%;
+    bottom: 8%;
     transform: scale(1);
-    z-index: 30;
-  }
+    transition: all 0.8s ease;
+}
 
-  .slick-center:after {
-    opacity: 0;
-  }
+.photos-slider__wrap-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.photos-slider__wrap-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+h2 {
+    font-family: Pacifico;
+    font-size: 36px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+img .top {
+    font-size: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+img .bottom {
+    font-size: 70%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.clip {
+    overflow: hidden;
+    bottom: 0;
+}
+
+.center .slick-center img {
+    transform: scale(1);
+    color: #e67e22;
+    opacity: 1;
+}
+
+.center .slick-center img .top {
+    font-size: 90%;
+    width: 90%;
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+.center .slick-center img .bottom {
+    font-size: 90%;
+    width: 90%;
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+.center img {
+    opacity: 0.8;
+    transition: all 300ms ease;
+    bottom: 0;
+    transform: scale(0.9);
+}
