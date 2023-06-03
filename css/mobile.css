@@ -1027,3 +1027,46 @@ body {
 .stats-mobile-chart {
     margin-bottom: 30px;
 }
+
+/* Photos Mobile Style */
+
+.photos-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.no-photos-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.no-photos-info__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.photos-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 327px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #031925;
+    background-color: #fff;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
