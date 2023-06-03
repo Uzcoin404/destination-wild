@@ -837,10 +837,10 @@ body {
 }
 
 .hero-user-list-wrap {
-   position: relative;
-   width: 100%;
-   height: 46px;
-   z-index: 11 !important;
+    position: relative;
+    width: 100%;
+    height: 46px;
+    z-index: 11 !important;
 }
 
 .hero-user-slob {
@@ -888,4 +888,70 @@ body {
     line-height: 17px;
     letter-spacing: -0.02em;
     color: #FFFFFF;
+}
+
+.hero-main-accordion {
+    width: 100%;
+    padding: 15px 0 !important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.hero-main-accordion-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-main-accordion-btn .ac-span{
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.hero-main-accordion-btn .ac-span-2 {
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.hero-main-accordion:not(.collapsed) {
+    background-color: transparent;
+}
+
+.hero-main-accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0 !important;
+}
+
+.hero-main-body-list {
+    width: 299px;
+}
+
+.hero-main-body-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.hero-main-body-item div {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.5);
 }
