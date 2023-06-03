@@ -1462,8 +1462,8 @@ body {
     opacity: 0.3;
     border-radius: 20px;
     /* background-color: rgba(0, 0, 0, 0.8) !important; */
-
 }
+
 
 /* .slick-initialized .slick-slide {
     position: relative !important;
@@ -1582,3 +1582,21 @@ img .bottom {
     bottom: 0;
     transform: scale(0.9);
 }
+
+.photos-slider-icon-cover {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+
+/* .clip {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    z-index: 111 !important;
+} */
